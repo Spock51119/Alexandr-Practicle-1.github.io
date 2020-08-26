@@ -16,7 +16,6 @@ let checkScroll = function() {
 		document.querySelector('.burger').classList.add('burger_disable');
 	};
 	currentScrollPosition = scroll;
-	console.log(currentScrollPosition);
 };
 
 window.onscroll = checkScroll;
