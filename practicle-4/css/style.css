@@ -269,7 +269,7 @@ time, mark, audio, video {
   width: 24px;
   height: 24px;
   background-color: transparent;
-  background-image: url(../../../img/nav-menu/__search/search.svg);
+  background-image: url(../img/nav-menu/__search/search.svg);
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -287,7 +287,7 @@ time, mark, audio, video {
           flex-direction: column;
   height: 100vh;
   min-height: 600px;
-  background-image: url(../../img/main/background.jpg);
+  background-image: url(../img/main/background.jpg);
 }
 
 .main__wrapper {
@@ -576,7 +576,7 @@ time, mark, audio, video {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 360px;
-  background-image: url(../../img/portfolio/background.png);
+  background-image: url(../img/portfolio/background.png);
   background-position-x: center;
   background-size: auto;
 }
@@ -735,7 +735,7 @@ time, mark, audio, video {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   min-height: 414px;
-  background-image: url(../../img/video-title/background.png);
+  background-image: url(../img/video-title/background.png);
   background-position-x: center;
   background-size: auto;
 }
@@ -1117,7 +1117,7 @@ time, mark, audio, video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(../../img/contact-me/background.png);
+  background-image: url(../img/contact-me/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1309,7 +1309,7 @@ time, mark, audio, video {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../../img/footer/background.png);
+  background-image: url(../img/footer/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
