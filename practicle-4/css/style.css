@@ -269,7 +269,7 @@ time, mark, audio, video {
   width: 24px;
   height: 24px;
   background-color: transparent;
-  background-image: url(../img/nav-menu/__search/search.svg);
+  background-image: url(../../../img/nav-menu/__search/search.svg);
   background-size: cover;
   background-repeat: no-repeat;
   border: none;
@@ -288,6 +288,8 @@ time, mark, audio, video {
   height: 100vh;
   min-height: 600px;
   background-image: url(../img/main/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main__wrapper {
@@ -1156,7 +1158,7 @@ time, mark, audio, video {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 120px;
+  min-height: 140px;
   border-bottom: 1px solid;
 }
 

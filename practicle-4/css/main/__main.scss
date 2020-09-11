@@ -3,7 +3,9 @@
     flex-direction: column;
     height: 100vh;
     min-height: 600px;
-    background-image: url(../../img/main/background.jpg);
+    background-image: url(../img/main/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     &__wrapper {
         display: flex;
         flex-direction: column;
