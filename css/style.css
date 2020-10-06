@@ -69,6 +69,14 @@ body {
 .nav__links {
 	text-decoration: none;
 	color: #212020;
+	padding: 10px;
+	border-bottom: 2px solid transparent;
+	transition: .2s;
+}
+
+.nav__links:hover {
+	border-bottom: 2px solid #000;
+	transition: .3s;
 }
 
 .main {
@@ -110,6 +118,7 @@ body {
 }
 
 .main__btn {
+	transition: transform .2s;
 	margin-top: -70px;
 	position: relative;
 	display: block;
@@ -118,8 +127,24 @@ body {
 	line-height: 48px;
 	text-align: center;
 	background-color: #a6a4a4;
+	border: 1px solid #212020;
+	border-radius: 5px;
 	color: #212020;
 	text-decoration: none;
+}
+
+.main__btn:hover {
+	background-color: #e0dbdb;
+	transform: scale(1.05);
+	-webkit-box-shadow: 3px 8px 8px 0px rgba(34, 60, 80, 0.2);
+	-moz-box-shadow: 3px 8px 8px 0px rgba(34, 60, 80, 0.2);
+	box-shadow: 3px 8px 8px 0px rgba(34, 60, 80, 0.2);
+	transition: .3s;
+}
+
+.main__btn:active {
+	background-color: #059e05;
+	color: #ffffff;
 }
 
 footer {
