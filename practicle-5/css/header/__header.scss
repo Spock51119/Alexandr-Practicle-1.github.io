@@ -31,3 +31,12 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  .header {
+    &_FillBackground {
+      background-color: transparent;
+      border-bottom: none;
+    }
+  }
+}

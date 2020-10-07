@@ -437,6 +437,13 @@ h6 {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .header_FillBackground {
+    background-color: transparent;
+    border-bottom: none;
+  }
+}
+
 .nav-menu__wrapper {
   max-width: 490px;
   height: 48px;
@@ -678,7 +685,7 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 10vh;
   margin-top: auto;
 }
 
@@ -1220,6 +1227,7 @@ h6 {
 .example__item-title {
   -webkit-transition: color .3s;
   transition: color .3s;
+  padding-top: 30px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 700;
@@ -1399,7 +1407,6 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 719px;
 }
 
 .recall__wrapper {
@@ -1418,7 +1425,7 @@ h6 {
   background-image: url(../img/recall/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 715px;
+  min-height: 610px;
   padding-top: 80px;
 }
 
@@ -1427,7 +1434,7 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  min-height: 90vh;
+  min-height: 500px;
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -1471,15 +1478,14 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 715px;
   height: 170px;
+  width: 75%;
   padding: 20px 0 40px 0;
   overflow: hidden;
 }
 
 .recall__p {
   text-align: center;
-  opacity: 0.7;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -1500,20 +1506,26 @@ h6 {
   .recall__wrapper {
     padding-top: 60px;
   }
+  .recall__contain {
+    padding: 60px 0;
+  }
   .recall__items {
-    padding: 60px;
+    padding: 60px 0;
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 740px) {
   .recall__wrapper {
-    padding-top: 30px;
+    padding-top: 40px;
   }
-  .recall__items {
+  .recall__contain {
     padding: 30px 0;
   }
+  .recall__items {
+    padding: 0;
+  }
   .recall__item {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 
