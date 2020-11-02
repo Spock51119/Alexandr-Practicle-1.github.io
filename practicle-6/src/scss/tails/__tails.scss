@@ -1,0 +1,13 @@
+.tails {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #404f54;
+  &_active {
+    font-weight: 700;
+  }
+  &__slash {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,33 @@
+.instagram {
+  padding-top: 80px;
+  &__wrapper {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 257px;
+  }
+  &__links {
+    display: block;
+    width: 33%;
+  }
+  &__link {
+    display: flex;
+    width: max-content;
+    padding-top: 20px;
+    font-size: 12.4px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #404f54;
+  }
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .instagram {
+    padding-top: 45px;
+  }
+}

@@ -1,0 +1,78 @@
+.pool-expert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__wrapper {
+    width: 94%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__container {
+    padding-bottom: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 0;
+  }
+  &__container-wrap {
+    margin-top: 60px;
+    width: 100%;
+    max-width: 778px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 33%;
+  }
+  &__img {
+    padding-top: 30px;
+    min-height: 64px;
+  }
+  &__link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__link-item:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0,22,27,0.1);
+  }
+  &__arrow{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 770px){
+  .pool-expert{
+    &__container{
+      padding-bottom: 40px;
+    }
+    &__item {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 50%;
+      flex-shrink: 0;
+    }
+    &__container-wrap{
+      justify-content: initial;
+      flex-wrap: nowrap;
+    }
+    &__arrow{
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pool-expert {
+    &__item {
+      max-width: 100%;
+    }
+  }
+}

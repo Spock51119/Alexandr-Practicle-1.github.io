@@ -1,0 +1,82 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor";
+@import "settings";
+
+// CUSTOM COMPONENTS STYLES
+// .burger {
+//   --burger-width: 40px;
+//   --burger-height: 20px;
+//   --burger-line-height: 2px;
+
+//   @include burger;
+// }
+
+
+body {
+  font-family: OpenSans;
+}
+@import "reset/_reset";
+@import "fonts/_fonts";
+@import "page/_page";
+@import "header/header";
+@import "logo/_logo";
+@import "navMenu/nav-menu";
+@import "title/_title";
+@import "text/_text";
+@import "tails/_tails";
+@import "articles/articles";
+@import "article/article";
+@import "recent-post/recent-post";
+@import "recent/recent";
+@import "links-media/links-media";
+@import "subscribe-email/subscribe-email";
+@import "button/button";
+@import "blog/blog";
+@import "instagram/instagram";
+@import "footer/footer";
+@import "freelancer/freelancer";
+@import "search-form/search-form";
+@import "work-types/work-types";
+@import "team-developers/team-developers";
+@import "pool-expert/pool-expert";
+@import "works/works";
+@import "plan/plan";
+@import "testimonials/testimonials";
+@import "burger/burger";
+
+.swiper-container {
+  padding-top: 60px;
+}
+
+.swiper-wrapper {
+  padding-bottom: 30px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1120px) {
+  .swiper-pagination,
+  .swiper-pagination-bullets,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .locked {
+    overflow: hidden;
+  }
+}
+
+
+@media screen and (max-width: 465px) {
+  .swiper-container {
+    padding-top: 25px;
+  }
+}
