@@ -1,0 +1,85 @@
+.title {
+  &_page {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    font-family: Lora;
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #404f54;
+  }
+  &__main {
+    padding-top: 75px;
+    padding-bottom: 35px;
+    font-family: Lora;
+    font-size: calc(42px + (10 + 10 * 0.7) * ((100vw - 320px) / 1600)); // 52px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #404f54;
+  }
+  &_h2 {
+    font-family: Lora;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #404f54;
+    padding-top: 30px;
+  }
+  &__h2-38p30h{
+    padding-top: 20px;
+    font-family: Lora;
+    font-size: calc(25px + (13 + 13 * 0.7) * ((100vw - 320px) / 1600)); //38px;
+    line-height: 30px;
+    font-weight: 700;
+    color: #404f54;
+  }
+  &_h3 {
+    font-family: Lora;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #404f54;
+  }
+  &__h3_thin {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #404f54;
+  }
+  &__h3_uppercase {
+    padding-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #404f54;
+  }
+  &__h3-blog {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #404f54;
+  }
+  &_hidden {
+    visibility: hidden;
+  }
+  &__pre-title{
+    font-family: Lora;
+    font-size: 10px;
+    line-height: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #404f54;
+  }
+}
+
+@media screen and (max-width: 715px){
+  .title{
+    &__h2-38p30h, &__main{
+      text-align: center;
+    }
+  }
+}

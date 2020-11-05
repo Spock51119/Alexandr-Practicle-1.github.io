@@ -8,13 +8,13 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
-  transition: .2s;
+  transition: transform 0.2s;
   &_square {
     border-radius: 0;
   }
   &:hover {
     transform: scale(1.04);
-    transition: .3s;
+    transition: transform 0.3s;
   }
   &:action {
     background-color: #e28bbc;

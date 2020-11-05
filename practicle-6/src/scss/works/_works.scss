@@ -29,8 +29,24 @@
     align-items: center;
     text-align: center;
     width: max-content;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 10px;
+  }
+  &__item:nth-child(4n+1){
+    background-image: url(../img/works1.png);
+  }
+  &__item:nth-child(4n+2){
+    background-image: url(../img/works2.png);
+  }
+  &__item:nth-child(4n+3){
+    background-image: url(../img/works3.png);
+  }
+  &__item:nth-child(4n+4){
+    background-image: url(../img/works4.png);
   }
   &__item-links{
+    padding-top: 165px;
     width: 235px;
   }
   &__h3 {
@@ -43,10 +59,6 @@
     color: #404f54;
     position: relative;
     z-index: 0;
-  }
-  &__img {
-    padding: 25px;
-    min-height: 178px;
   }
   &__h3::before{
     content: "";

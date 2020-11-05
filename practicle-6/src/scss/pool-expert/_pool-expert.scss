@@ -29,15 +29,33 @@
   }
   &__item {
     max-width: 33%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 35px;
   }
-  &__img {
-    padding-top: 30px;
-    min-height: 64px;
+  &__item:nth-child(6n+1){
+    background-image: url(../img/pool1.png);
+  }
+  &__item:nth-child(6n+2){
+    background-image: url(../img/pool2.png);
+  }
+  &__item:nth-child(6n+3){
+    background-image: url(../img/pool3.png);
+  }
+  &__item:nth-child(6n+4){
+    background-image: url(../img/pool4.png);
+  }
+  &__item:nth-child(6n+5){
+    background-image: url(../img/pool5.png);
+  }
+  &__item:nth-child(6n+6){
+    background-image: url(../img/pool6.png);
   }
   &__link-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 100px;
   }
   &__link-item:hover {
     box-shadow: 0px 0px 20px 0px rgba(0,22,27,0.1);
