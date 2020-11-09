@@ -25,6 +25,13 @@
   }
 }
 
+@media screen and (max-width: 715px) {
+  .search-form{
+    position: absolute;
+    bottom: 10ch;
+  }
+}
+
 @media screen and (max-width: 440px) {
   .search-form {
     &__input {

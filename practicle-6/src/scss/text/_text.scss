@@ -8,14 +8,14 @@
     letter-spacing: 0.5px;
   }
   &__description {
-    padding-top: 20px;
+    padding: 20px;
     font-size: calc(17px + (4 + 4 * 0.7) * ((100vw - 320px) / 1600)); // 21px;
     line-height: 1.2;
     font-weight: 400;
     color: #404f54;
   }
   &__description-item {
-    padding: 20px 0;
+    padding: 20px;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;

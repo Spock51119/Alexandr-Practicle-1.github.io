@@ -12,6 +12,7 @@
     width: 94%;
   }
   &__container {
+    display: flex;
     padding-top: 65px;
     width: 100%;
     position: relative;
@@ -76,7 +77,7 @@
   &__item-links:hover &_text-hover{
     color: #ffffff
   }
-  &__arrow{
+  &__pagination{
     display: none;
   }
 }
@@ -92,7 +93,7 @@
       width: 50%;
       flex-shrink: 0;
     }
-    &__arrow{
+    &__pagination{
       display: block;
     }
   }

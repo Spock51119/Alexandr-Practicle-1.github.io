@@ -21,9 +21,10 @@
 @media screen and (max-width: 465px) {
   .links-media {
     padding-top: 40px;
-    flex-direction: column;
+    flex-wrap: wrap;
     &__list {
       flex-wrap: wrap;
+      max-width: 310px;
       justify-content: space-evenly;
     }
     &__svg {

@@ -34,3 +34,16 @@ body {
 @import "plan/plan";
 @import "testimonials/testimonials";
 @import "burger/burger";
+
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-button-next{
+  right: 0;
+}
+
+@media screen and (max-width: 750px){
+  .locked {
+    overflow: hidden;
+  }
+}
