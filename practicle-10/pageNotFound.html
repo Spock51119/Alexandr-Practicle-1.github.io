@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="appbar">
+    <a href="./index.html" class="appbar__logo"></a>
+    <a href="./pageNotFound.html" class="appbar__link">Sell on Shopka</a>
+    <a href="./pageNotFound.html" class="appbar__link">Register</a>
+    <form class="appbar__search">
+      <input type="search" class="appbar__input" placeholder="Search">
+      <input type="submit" class="appbar__btn-search" value=""></input>
+    </form>
+    <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
+    <div class="appbar__account account">
+      <buton class="account__btn" id="sing-in">Sign in</buton>
+      <buton class="account__btn" id="cart">My cart</buton>
+      <buton class="account__menu"></buton>
+    </div>
+    <div class="appbar_modals modals">
+      <div class="modals__login hidde">
+        <form class="modals__login-form">
+          <span class="modals__login-text">Login:</span>
+          <input type="email" class="modals__login-input" aria-label="Login">
+          <span class="modals__login-text">Password:</span>
+          <input type="password" class="modals__login-input" aria-label="Password">
+          <button type="submit" class="modals__login-btn">Enter</button>
+          <button class="modals__login-btn">Restore password</button>
+          <button class="modals__login-btn modals__login-close-btn">X</button>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="not-page">
+    <h1 class="not-page__title">404</h1>
+    <p class="not-page__text">Page not found. <br> Most likely it hasn't been created yet.</p>
+  </div>
+</body>
+</html>
