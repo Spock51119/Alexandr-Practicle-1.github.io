@@ -16,15 +16,15 @@
   <a href="./pageNotFound.html" class="appbar__link">Register</a>
   <form class="appbar__search">
     <input type="search" class="appbar__input" placeholder="Search">
-    <input type="submit" class="appbar__btn-search" value=""></input>
+    <input type="submit" class="appbar__btn-search" value="">
   </form>
   <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
   <div class="appbar__account account">
-    <buton class="account__btn" id="sing-in">Sign in</buton>
-    <buton class="account__btn" id="cart">My cart
+    <div class="account__btn" id="sing-in">Sign in</div>
+    <div class="account__btn" id="cart">My cart
       <span id="count-product">1+</span>
-    </buton>
-    <buton class="account__menu" id="login"></buton>
+    </div>
+    <div class="account__menu" id="login"></div>
   </div>
   <div class="appbar_modals modals">
     <div class="modals__login hidde">
@@ -39,8 +39,7 @@
       </form>
     </div>
     <div class="modals__cart hidde">
-      <div class="modals__wrap-cart">
-      </div>
+      <div class="modals__wrap-cart"></div>
     </div>
     <div class="modals__login-menu hidde">
       <ul class="modals__login-menu-list">
@@ -134,82 +133,99 @@
 </nav>
   <main class="page">
     <aside class="departments">
-  <button class="departments__btn">
-    <svg class="departments__btn-svg">
-      <use href="images/sprite.svg#filter"></use>
-    </svg>
-    Departments</button>
+  <button class="departments__btn">Departments</button>
+  <section class="departments__wrap-list">
+    <h2 class="departments__title-large">All categories:</h2>
     <ul class="departments__list">
-      <li class="departments__all-category">
-        <svg class="departments__list-chevron">
-          <use href="images/sprite.svg#chevronDown"></use>
-        </svg>
-        All categories
-        <ul class="departments__sub-category">
+      <li class="departments__category">
+        <section class="departments__category-wrap">
           <svg class="departments__list-chevron">
             <use href="images/sprite.svg#chevronDown"></use>
           </svg>
-          Electronics
-          <li class="departments__item-category hidde">Cell Phones</li>
-          <li class="departments__item-category hidde">Smartphones</li>
-          <li class="departments__item-category hidde">Computers</li>
-          <li class="departments__item-category hidde">accessories</li>
-          <li class="departments__item-category hidde">Cameras</li>
-          <li class="departments__item-category hidde">TV</li>
-          <li class="departments__item-category hidde">Appliances</li>
-        </ul>
-        <ul class="departments__sub-category">
+          <h3 class="departments__title-middle">Electronics</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Cell Phones</li>
+            <li class="departments__item-category hidde">Smartphones</li>
+            <li class="departments__item-category hidde">Computers</li>
+            <li class="departments__item-category hidde">Accessories</li>
+            <li class="departments__item-category hidde">Cameras</li>
+            <li class="departments__item-category hidde">TV</li>
+            <li class="departments__item-category hidde">Appliances</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
           <svg class="departments__list-chevron">
             <use href="images/sprite.svg#chevronDown"></use>
           </svg>
-          Business & Industrial
-          <li class="departments__item-category hidde">Hand tool</li>
-          <li class="departments__item-category hidde">Generators</li>
-          <li class="departments__item-category hidde">garden equipment</li>
-          <li class="departments__item-category hidde">welders</li>
-        </ul>
-        <ul class="departments__sub-category">
+          <h3 class="departments__title-middle">Business & Industrial</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Hand tool</li>
+            <li class="departments__item-category hidde">Generators</li>
+            <li class="departments__item-category hidde">Garden equipment</li>
+            <li class="departments__item-category hidde">Welders</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
           <svg class="departments__list-chevron">
             <use href="images/sprite.svg#chevronDown"></use>
           </svg>
-          Home & Garden
-          <li class="departments__item-category hidde">Plumbing</li>
-          <li class="departments__item-category hidde">Furniture</li>
-          <li class="departments__item-category hidde">Tableware</li>
-          <li class="departments__item-category hidde">Electrician</li>
-        </ul>
-        <ul class="departments__sub-category">
+          <h3 class="departments__title-middle">Home & Garden</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Plumbing</li>
+            <li class="departments__item-category hidde">Furniture</li>
+            <li class="departments__item-category hidde">Tableware</li>
+            <li class="departments__item-category hidde">Electrician</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
           <svg class="departments__list-chevron">
             <use href="images/sprite.svg#chevronDown"></use>
           </svg>
-          Children's products
-          <li class="departments__item-category hidde">Strollers</li>
-          <li class="departments__item-category hidde">Cribs</li>
-          <li class="departments__item-category hidde">Diapers</li>
-          <li class="departments__item-category hidde">Toys</li>
-        </ul>
-        <ul class="departments__sub-category">
+          <h3 class="departments__title-middle">Children's products</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Strollers</li>
+            <li class="departments__item-category hidde">Cribs</li>
+            <li class="departments__item-category hidde">Diapers</li>
+            <li class="departments__item-category hidde">Toys</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
           <svg class="departments__list-chevron">
             <use href="images/sprite.svg#chevronDown"></use>
           </svg>
-          Auto
-          <li class="departments__item-category hidde">Tires</li>
-          <li class="departments__item-category hidde">Discs</li>
-          <li class="departments__item-category hidde">Batteries</li>
-          <li class="departments__item-category hidde">Engine oil</li>
-        </ul>
-        <ul class="departments__sub-category">
+          <h3 class="departments__title-middle">Auto</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Tires</li>
+            <li class="departments__item-category hidde">Cribs</li>
+            <li class="departments__item-category hidde">Batteries</li>
+            <li class="departments__item-category hidde">Engine oil</li>
+          </ul>
+        </section>
+      </li>
+      <li class="departments__category">
+        <section class="departments__category-wrap">
           <svg class="departments__list-chevron">
             <use href="images/sprite.svg#chevronDown"></use>
           </svg>
-          Tourism
-          <li class="departments__item-category hidde">Backpacks</li>
-          <li class="departments__item-category hidde">Tents</li>
-          <li class="departments__item-category hidde">Thermos</li>
-          <li class="departments__item-category hidde">Suitcases</li>
-        </ul>
+          <h3 class="departments__title-middle">Tourism</h3>
+          <ul class="departments__sub-category">
+            <li class="departments__item-category hidde">Backpacks</li>
+            <li class="departments__item-category hidde">Tents</li>
+            <li class="departments__item-category hidde">Thermos</li>
+            <li class="departments__item-category hidde">Suitcases</li>
+          </ul>
+        </section>
       </li>
     </ul>
+  </section>
 </aside>
     <section class="board-sales">
   <h2 class="visually-hidden">Select a product</h2>
@@ -217,20 +233,20 @@
     <div class="board-sales__filters">
       <div class="board-sales__selects">
         <ul class="board-sales__select">
-          <span class="board-sales__filter-item" data-value="notChosen">Utility</span>
-          <span class="board-sales__filter-item hidde" data-value="useless">Useless First</span>
-          <span class="board-sales__filter-item hidde" data-value="useful">Useful</span>
+          <li class="board-sales__filter-item" data-value="notChosen">Utility</li>
+          <li class="board-sales__filter-item hidde" data-value="useless">Useless First</li>
+          <li class="board-sales__filter-item hidde" data-value="useful">Useful</li>
         </ul>
         <ul class="board-sales__select">
-          <span class="board-sales__filter-item" data-value="notChosen">Condition</span>
-          <span class="board-sales__filter-item hidde" data-value="notUsed">Not used</span>
-          <span class="board-sales__filter-item hidde" data-value="secondhand">Secondhand</span>
+          <li class="board-sales__filter-item" data-value="notChosen">Condition</li>
+          <li class="board-sales__filter-item hidde" data-value="notUsed">Not used</li>
+          <li class="board-sales__filter-item hidde" data-value="secondhand">Secondhand</li>
         </ul>
         <ul class="board-sales__select">
-          <span class="board-sales__filter-item" data-value="notChosen">Delivery options</span>
-          <span class="board-sales__filter-item hidde" data-value="pickup">Pickup</span>
-          <span class="board-sales__filter-item hidde" data-value="freeShipping">free shipping</span>
-          <span class="board-sales__filter-item hidde" data-value="fastDelivery">fast delivery</span>
+          <li class="board-sales__filter-item" data-value="notChosen">Delivery options</li>
+          <li class="board-sales__filter-item hidde" data-value="pickup">Pickup</li>
+          <li class="board-sales__filter-item hidde" data-value="freeShipping">free shipping</li>
+          <li class="board-sales__filter-item hidde" data-value="fastDelivery">fast delivery</li>
         </ul>
       </div>
       <div class="board-sales__show-filter">
@@ -287,7 +303,7 @@
       <p class="footer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit amet deserunt officiis id, pariatur tenetur iusto adipisci error? Minus, quae?</p>
       <a href="pageNotFound.html" class="footer__link">Comilla, Bangladesh 3500</a>
       <a href="mailto:test@mail.com" class="footer__link">kawsarahmed0210@gmail.com</a>
-      <a href="tel: +01647470457" class="footer__link">+7(800) 355-35-35</a>
+      <a href="tel:+01647470457" class="footer__link">+7(800) 355-35-35</a>
       <h3 class="footer__subtitle">We are in social networks:</h3>
       <ul class="footer__socialLinks">
         <li class="footer__item-social"><a href="pageNotFound.html" class="footer__link-social"></a></li>
