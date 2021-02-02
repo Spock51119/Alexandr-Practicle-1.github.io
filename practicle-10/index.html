@@ -4,41 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopka</title>
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
-  <div class="appbar">
-    <a href="./index.html" class="appbar__logo"></a>
-    <a href="./pageNotFound.html" class="appbar__link">Sell on Shopka</a>
-    <a href="./pageNotFound.html" class="appbar__link">Register</a>
-    <form class="appbar__search">
-      <input type="search" class="appbar__input" placeholder="Search">
-      <input type="submit" class="appbar__btn-search" value=""></input>
-    </form>
-    <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
-    <div class="appbar__account account">
-      <buton class="account__btn" id="sing-in">Sign in</buton>
-      <buton class="account__btn" id="cart">My cart</buton>
-      <buton class="account__menu"></buton>
+  <h1 class="visually-hidden">Sundries shop</h1>
+  <header class="appbar">
+  <a href="./index.html" class="appbar__logo"></a>
+  <a href="./pageNotFound.html" class="appbar__link">Sell on Shopka</a>
+  <a href="./pageNotFound.html" class="appbar__link">Register</a>
+  <form class="appbar__search">
+    <input type="search" class="appbar__input" placeholder="Search">
+    <input type="submit" class="appbar__btn-search" value=""></input>
+  </form>
+  <a href="./pageNotFound.html" class="appbar__link">Consumer Electronics</a>
+  <div class="appbar__account account">
+    <buton class="account__btn" id="sing-in">Sign in</buton>
+    <buton class="account__btn" id="cart">My cart
+      <span id="count-product">1+</span>
+    </buton>
+    <buton class="account__menu" id="login"></buton>
+  </div>
+  <div class="appbar_modals modals">
+    <div class="modals__login hidde">
+      <form class="modals__login-form">
+        <span class="modals__login-text">Login:</span>
+        <input type="email" class="modals__login-input" aria-label="Login">
+        <span class="modals__login-text">Password:</span>
+        <input type="password" class="modals__login-input" aria-label="Password">
+        <button type="submit" class="modals__login-btn">Enter</button>
+        <button class="modals__login-btn">Restore password</button>
+        <button class="modals__login-btn modals__login-close-btn">X</button>
+      </form>
     </div>
-    <div class="appbar_modals modals">
-      <div class="modals__login hidde">
-        <form class="modals__login-form">
-          <span class="modals__login-text">Login:</span>
-          <input type="email" class="modals__login-input" aria-label="Login">
-          <span class="modals__login-text">Password:</span>
-          <input type="password" class="modals__login-input" aria-label="Password">
-          <button type="submit" class="modals__login-btn">Enter</button>
-          <button class="modals__login-btn">Restore password</button>
-          <button class="modals__login-btn modals__login-close-btn">X</button>
-          
-        </form>
+    <div class="modals__cart hidde">
+      <div class="modals__wrap-cart">
       </div>
     </div>
+    <div class="modals__login-menu hidde">
+      <ul class="modals__login-menu-list">
+        <li class="modals__login-menu-item">John Doe</li>
+        <li class="modals__login-menu-item">My watch</li>
+        <li class="modals__login-menu-item">Register</li>
+        <li class="modals__login-menu-item">Sell on Shopka</li>
+        <li class="modals__login-menu-item">Consumer Electronics</li>
+        <li class="modals__login-menu-item">Settings</li>
+      </ul>
+    </div>
   </div>
-  <div class="top-nav" data-mobile="false">
+</header>
+  <nav class="top-nav" data-mobile="false">
   <ul class="top-nav__list">
     <li class="top-nav__item">
       <svg class="top-nav__item-illustration">
@@ -115,9 +131,9 @@
   </ul>
   <div class="swiper-button-prev"></div>
   <div class="swiper-button-next"></div>
-</div>
-  <div class="page">
-    <div class="departments">
+</nav>
+  <main class="page">
+    <aside class="departments">
   <button class="departments__btn">
     <svg class="departments__btn-svg">
       <use href="images/sprite.svg#filter"></use>
@@ -194,8 +210,9 @@
         </ul>
       </li>
     </ul>
-</div>
-    <div class="board-sales">
+</aside>
+    <section class="board-sales">
+  <h2 class="visually-hidden">Select a product</h2>
   <div class="board-sales__wrapper">
     <div class="board-sales__filters">
       <div class="board-sales__selects">
@@ -250,323 +267,11 @@
         </button>
       </div>
     </div>
-    <div class="board-sales__products products">
-      <div class="products__card">
-        <img src="./images/cards/qwerty.jpg" alt="qwerty" class="products__illust">
-        <a href="./product.html" class="products__link">Vintage Typewriter to post awesome stories about UI design and webdev.</a>
-        <span class="products__cost">$49.50</span>
-        <span class="products__additional">Eligible for Shipping To Mars or somewhere else</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-          <button class="products__to-cart products__btn"> 
-            <svg class="products__btn-svg">
-              <use xlink:href="images/sprite.svg#cart"/>
-            </svg>
-            To cart
-          </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/boots.jpg" alt="boots" class="products__illust">
-        <a href="./product.html" class="products__link">Lee Pucker design. Leather botinki for handsome designers. Free shipping.</a>
-        <span class="products__cost">$13.95</span>
-        <span class="products__additional">1258 bids, 359 watchers $5.95 for shipping</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-          <button class="products__to-cart products__btn"> 
-            <svg class="products__btn-svg">
-              <use xlink:href="./images/sprite.svg#cart"/>
-            </svg>
-            To cart
-          </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/kit.jpg" alt="cat" class="products__illust">
-        <a href="./product.html" class="products__link">Timesaving kitten to save months on development. Playful, cute, cheap!</a>
-        <span class="products__cost">$128.99</span>
-        <span class="products__additional">Eligible for nothing :(</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-          <button class="products__to-cart products__btn"> 
-            <svg class="products__btn-svg">
-              <use xlink:href="./images/sprite.svg#cart"/>
-            </svg>
-            To cart
-          </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/tubes.jpg" alt="tubes" class="products__illust">
-        <a href="./product.html" class="products__link">Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!</a>
-        <span class="products__cost">$13.95</span>
-        <span class="products__additional">Wordwide shitting available Buyers protection possible!</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/mate.jpg" alt="mate" class="products__illust">
-        <a href="./product.html" class="products__link">Creativity stimulating lotion. Drink every morning to generate better ideas!</a>
-        <span class="products__cost">$12.48</span>
-        <span class="products__additional">Wordwide shifting available Buyers protection possible!</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/proto.jpg" alt="x3" class="products__illust">
-        <a href="./product.html" class="products__link">Prototyping items to create a lot if useless things...</a>
-        <span class="products__cost">$128.99</span>
-        <span class="products__additional">Showcasing onHovered state</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/spring.jpg" alt="spring" class="products__illust">
-        <a href="./product.html" class="products__link">John Von Ebalkin SPRING </a>
-        <span class="products__cost">$13.95</span>
-        <span class="products__additional">1258 bids, 359 watchers $5.95 for shipping</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/pencil.jpg" alt="pencil" class="products__illust">
-        <a href="./product.html" class="products__link">Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY</a>
-        <span class="products__cost">$9.50</span>
-        <span class="products__additional">Eligible for Shipping To Mars or somewhere else</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/tea.jpg" alt="tea" class="products__illust">
-        <a href="./product.html" class="products__link">Professional teadrinking set for every designer and developer</a>
-        <span class="products__cost">$128.99</span>
-        <span class="products__additional">Eligible for nothing :(</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/tree.jpg" alt="tree" class="products__illust">
-        <a href="./product.html" class="products__link">One string Bonsai description</a>
-        <span class="products__cost">$11.68</span>
-        <span class="products__additional">Wordwide shifting available Buyers protection possible!</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/varnish.jpg" alt="varnish" class="products__illust">
-        <a href="./product.html" class="products__link">Simply best item in town to shine bright with your Nine Inch Nails</a>
-        <span class="products__cost">$1.25</span>
-        <span class="products__additional">Eligible for Shipping To Mars or somewhere else</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-      <div class="products__card">
-        <img src="./images/cards/brush.jpg" alt="brush" class="products__illust">
-        <a href="./product.html" class="products__link">KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!</a>
-        <span class="products__cost">$23.25</span>
-        <span class="products__additional">1258 bids, 359 watchers $5.95 for shipping</span>
-        <div class="products__rating rating">
-          <div class="rating__star" data-value="1"></div>
-          <div class="rating__star" data-value="2"></div>
-          <div class="rating__star" data-value="3"></div>
-          <div class="rating__star" data-value="4"></div>
-          <div class="rating__star" data-value="5"></div>
-          <span class="rating__value">4.85</span>
-        </div>
-        <button class="products__watch products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#heard"/>
-          </svg>
-          Watch
-        </button>
-        <button class="products__to-cart products__btn"> 
-          <svg class="products__btn-svg">
-            <use xlink:href="./images/sprite.svg#cart"/>
-          </svg>
-          To cart
-        </button>
-      </div>
-    </div>
+    <div class="board-sales__products products"></div>
   </div>
-</div>
-  </div>
+  <button class="products__btn-show-more">Show more</button>
+</section>
+  </main>
   <footer class="footer">
   <div class="footer__wrapper">
     <h2 class="footer__title footer__about-us">About us:</h2>
