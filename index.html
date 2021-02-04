@@ -1,77 +1,100 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Примеры моих работ</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/vulcansalutel.svg" | any>
+  <title>Александр Б</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="page">
-        <header class="header wrapper">
-        	<div class="header__nav">
-        		<div class="header__logo">
-        			<img src="img/spock.svg" alt="Логотип" class="header__logo">
-        		</div>
-        		<ul class="nav__ul">
-        			<li class="nav__li"><a href="https://github.com/Spock51119?tab=repositories" class="nav__links">Мой github</a></li>
-        			<li class="nav__li"><a href="https://github.com/Spock51119/KK-KiberKrolik" class="nav__links">Мои приложения</a></li>
-        			<li class="nav__li"><a href="mailto:aleksandr.b.2016@rambler.ru" class="nav__links">Контакты</a></li>
-        		</ul>
-        	</div>
-        </header>
-        <section class="main wrapper">
-        	<div class="main__exempleWork">
-        		<img src="img/page1.JPG" alt="Первый сайт" class="main__img">
-						<a href="practicle-1/index.html" class="main__btn">Открыть сайт</a>
-        	 </div>
-        	<div class="main__exempleWork">
-        		<img src="img/page2.JPG" alt="Второй сайт" class="main__img">
-						<a href="practicle-2/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__exempleWork">
-        		<img src="img/page3.JPG" alt="Третий сайт" class="main__img">
-						<a href="practicle-3/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__exempleWork">
-        		<img src="img/page4.jpg" alt="Четвертый сайт" class="main__img">
-						<a href="practicle-4/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__exempleWork">
-        		<img src="img/page5.jpg" alt="Пятый сайт" class="main__img">
-						<a href="practicle-5/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__exempleWork">
-        		<img src="img/page6.png" alt="Шестой сайт" class="main__img">
-						<a href="practicle-6/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__exempleWork">
-        		<img src="img/page7.png" alt="Седьмой сайт" class="main__img">
-						<a href="practicle-7/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__exempleWork">
-        		<img src="img/page8.png" alt="Восьмой сайт" class="main__img">
-						<a href="practicle-8/index.html" class="main__btn">Открыть сайт</a>
-					</div>
-					<div class="main__exempleWork">
-        		<img src="img/page9.png" alt="Девятый сайт" class="main__img">
-						<a href="practicle-9/index.html" class="main__btn">Открыть сайт</a>
-					</div>
-					<div class="main__exempleWork">
-        		<img src="img/page10.png" alt="Десятый сайт" class="main__img">
-						<a href="practicle-10/index.html" class="main__btn">Открыть сайт</a>
-        	</div>
-        	<div class="main__text">
-        		<h1 class="main__h1">Мои учебные проекты</h1>
-        		<p class="main__p">Макеты сайтов взяты из открытых источников</p>
-        	</div>
-        </section>
-        <footer class="footer">
-        	<span class="footer__copyright">© 2021 Все права защищены, spock51119</span>
-        	<div>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-        </footer>
-        
+  <style>
+    body { font-family: "Roboto", sans-serif; }
+  </style>
+  <header class="header">
+  <div class="header__wrapper">
+    <div class="header__logo"></div>
+    <h2 class="header__title">Богаткин Александр</h2>
+    <div class="header__contacts">
+      <span class="header__item-contact">E-mail:</span>
+      <a href="mailto:Aleksandr.B.2016@rambler.ru" class="header__link">Aleksandr.B.2016@rambler.ru</a>
+      <span class="header__item-contact">Телефон №:</span>
+      <a href="tel:+79058181118" class="header__link">+7 (905) 818-11-18</a>
     </div>
+  </div>
+</header>
+  <div class="burger">
+  <button class="burger__icon"></button>
+</div>
+  <main class="container">
+    <nav class="navigation">
+  <div class="navigation__wrapper">
+    <div class="navigation__items">
+      <div class="navigation__item"><a href="#about" class="navigation__link">Обо мне</a></div>
+      <div class="navigation__item"><a href="#works" class="navigation__link">Учебные проекты</a></div>
+      <div class="navigation__item"><a href="#my-code" class="navigation__link">Мой код</a></div>
+    </div>
+  </div>
+</nav>
+    <div class="contents">
+  <div class="contents__wrapper">
+    <div class="contents__item" id="about">
+      <h2 class="contents__title">Обо мне:</h2>
+      <p class="contents__text">Богаткин Александр</p>
+      <p class="contents__text"><b>Возвраст:</b> 29 лет</p>
+      <p class="contents__text"><b>Образование:</b> Средне-специальное</p>
+      <p class="contents__text"><b>Ищу работу на должность:</b> HTML- верстальщик, junior-frontend разработчик, помощник программиста, программист-стажер.</p>
+      <p class="contents__text">Начал изучать программирование с языка Python. После изучения его синтаксиса и ООП, изучал алгоритмы.
+         Для закрепления решил сделать pet-проект и создал GUI приложение. Для чего пришлось разобраться с такими библиотеками как PyQt, matplotlib и SQLite.
+          После этого решил изучить фреймворк Django, но еще не приступил к изучению решив, что прежде необходимо освоить HTML и CSS.
+          Изучая их, я многократно сталкивался с необходимостью знания java-script`a и приступил к его изучению. 
+          На данный момент в учебных целях и для тренировки я верстаю макеты из интернета. Поначалу учился верстать на float`aх, потом перешел к Flex-box и grid`ам.
+           При верстке использую css препроцессор Sass/SCSS, gulp и cтараюсь использовать БЭМ c семантикой HTML5.</p>
+      <p class="contents__text">Список того, что я изучал и использовал в учебных проектах:</p>
+      <ul class="contents__list-skills">
+        <li class="contents__item-skills">HTML</li>
+        <li class="contents__item-skills">CSS</li>
+        <li class="contents__item-skills">SCSS</li>
+        <li class="contents__item-skills">JavaScript</li>
+        <li class="contents__item-skills">БЭМ</li>
+        <li class="contents__item-skills">Gulp</li>
+        <li class="contents__item-skills">Python</li>
+        <li class="contents__item-skills">SQLite</li>
+        <li class="contents__item-skills">PyQt5</li>
+        <li class="contents__item-skills">Matplotlib</li>
+      </ul>
+    </div>
+    <div class="contents__item" id="works">
+      <h2 class="contents__title">Сверстанные мною сайты:</h2>
+      <p class="contents__text">Макеты сайтов взяты из открытых источников и сверстаны в учебных целях. В каждом из этих сайтов я старался изучить и применить что-то новое. Сайты расположены в обратном порядке
+        т.е самые последние сверстанные мною сайты будут вверху и оценивать текущий уровень знаний лучше по ним.
+      </p>
+      <div class="contents__works-wrap">
+        <a href="./practicle-10/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page10.webp" alt="illustration 10"></a>
+        <a href="./practicle-9/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page9.webp" alt="illustration 9"></a>
+        <a href="./practicle-8/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page8.webp" alt="illustration 8"></a>
+        <a href="./practicle-7/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page7.webp" alt="illustration 7"></a>
+        <a href="./practicle-6/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page6.webp" alt="illustration 6"></a>
+        <a href="./practicle-5/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page5.webp" alt="illustration 5"></a>
+        <a href="./practicle-4/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page4.webp" alt="illustration 4"></a>
+        <a href="./practicle-3/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page3.webp" alt="illustration 3"></a>
+        <a href="./practicle-2/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page2.webp" alt="illustration 2"></a>
+        <a href="./practicle-1/index.html" class="contents__works-item" target="_blank"><img class="contents__img" src="./images/page1.webp" alt="illustration 1"></a>
+      </div>
+    </div>
+    <div class="contents__item" id="my-code">
+      <h2 class="contents__title">Мой код:</h2>
+      <p class="contents__text">Ознакомиться с моим кодом и оценить мой уровень знаний можно по ссылкам ниже.</p>
+      <a href="https://github.com/Spock51119" class="contents__links" target="_blank">Перейти на GitHub</a>
+      <a href="https://www.codewars.com/users/Spock51119" class="contents__links" target="_blank">Перейти на Codewars</a>
+      <a href="https://codepen.io/spock51119" class="contents__links" target="_blank">Перейти на codepen</a>
+    </div>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+  <smoll class="footer__smoll">2021г.</smoll>
+</footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
