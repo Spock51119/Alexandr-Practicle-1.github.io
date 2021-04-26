@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Mulish"),
+    url("../fonts/Mulish-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  src:
+    local("Mulish"),
+    url("../fonts/Mulish-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local("Mulish"),
+    url("../fonts/Mulish-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  src:
+    local("Mulish"),
+    url("../fonts/Mulish-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Marcellus";
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Marcellus"),
+    url("../fonts/Marcellus-Regular.woff2") format("woff2");
+}
