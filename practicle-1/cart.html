@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angiopharm корзина</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+  </head>
+  <body>
+    <header class="header"> 
+      <div class="header__wrapper wrapper"> <a class="header__logotip" href="#"></a>
+        <button class="header__burger-menu">Меню</button>
+        <nav class="header__navitation"> <a class="header__item-navigation" href="/catalog.html">Каталог</a><a class="header__item-navigation" href="/cooperation.html">Сотрудничество</a>
+          <button class="header__callback-btn secondary-button secondary-button_small">обратный звонок</button>
+          <div class="header__login-btns"> 
+            <button class="header__login-btn header__login-btn_personal-account">Личный кабинет</button>
+            <button class="header__login-btn disabled">вход</button>
+            <button class="header__login-btn disabled">регистрация</button>
+          </div>
+        </nav>
+        <div class="header__right-buttons">
+          <form class="search" action="#">
+            <input class="search__input" type="search">
+            <button class="search__btn"> </button>
+          </form>
+          <button class="header__right-btn header__right-btn_favorite" aria-label="Избранное"><span class="header__right-btn-counter">14</span></button>
+          <button class="header__right-btn header__right-btn_cart" aria-label="Корзина"><span class="header__right-btn-counter">2</span></button>
+        </div>
+      </div>
+      <div class="modals">
+        <div class="login"> 
+          <div class="login modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Войти в личный кабинет</h2>
+              <div class="modal__input input"><span class="input__title">E-mail</span>
+                <input class="modal__input input__item" type="text" placeholder="E-mail"><span class="input__error">Пользователя с таким E-mail не существует </span>
+              </div>
+              <div class="modal__password password"><span class="password__title">Пароль</span>
+                <input class="modal__input password__item" type="password" placeholder="Пароль"><span class="password__error">Проверьте пароль еще раз </span>
+                <button class="password__toggle-show" type="button"></button>
+              </div>
+              <button class="modal__btn-submit primary-button">Войти</button>
+              <button class="login__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+              <div class="modal__footer">
+                <button class="modal__forgot-password body-text">Забыли пароль?</button><span class="modal__text">Нет аккаунта?</span>
+                <button class="body-text">Зарегистрируйтесь сейчас</button>
+              </div>
+            </form>
+          </div>
+          <div class="forgot-password modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Восстановление пароля</h2>
+              <p class="body-text">Введите e-mail. На вашу почту придет письмо со ссылкой для создания нового пароля.</p>
+              <div class="modal__input input"><span class="input__title">E-mail</span>
+                <input class="modal__input input__item" type="text" placeholder="E-mail"><span class="input__error">Пользователя с таким E-mail не существует </span>
+              </div>
+              <button class="modal__btn-submit primary-button">Отправить</button>
+              <button class="forgot-password__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="create-new-login modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Создайте новый пароль</h2>
+              <p class="body-text">Ваш пароль успешно сброшен, придумайте новый.</p>
+              <div class="modal__password password"><span class="password__title">Новый пароль</span>
+                <input class="modal__input password__item" type="password" placeholder="Новый пароль"><span class="password__error">Не короче х-символов </span>
+                <button class="password__toggle-show" type="button"></button>
+              </div>
+              <div class="modal__password password"><span class="password__title">Повторите пароль</span>
+                <input class="modal__input password__item" type="password" placeholder="Повторите пароль"><span class="password__error">Пароли не совпадают </span>
+                <button class="password__toggle-show" type="button"></button>
+              </div>
+              <button class="modal__btn-submit primary-button">Сохранить</button>
+              <button class="create-new-login__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="final modal disabled">
+            <div class="modal__form">
+              <h2 class="final__title">Новый пароль успешно сохранен!</h2>
+              <button class="final__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="registration"> 
+          <div class="natural-person modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Регистрация нового пользователя</h2>
+              <div class="modal__input input input_required"><span class="input__title">ФИО</span>
+                <input class="modal__input input__item" type="text" placeholder="ФИО"><span class="input__error">Укажите ФИО</span>
+              </div>
+              <div class="modal__input input input_required"><span class="input__title">Телефон</span>
+                <input class="modal__input input__item" type="text" placeholder="Телефон"><span class="input__error">Укажите номер телефона </span>
+              </div>
+              <div class="modal__input input input_required"><span class="input__title">E-mail</span>
+                <input class="modal__input input__item" type="text" placeholder="E-mail"><span class="input__error">Укажите E-mail</span>
+              </div>
+              <div class="modal__password password"><span class="password__title">Пароль</span>
+                <input class="modal__input password__item" type="password" placeholder="Пароль"><span class="password__error">Слишком простой пароль </span>
+                <button class="password__toggle-show" type="button"></button>
+              </div>
+              <button class="modal__btn-submit primary-button">Зарегистрироваться</button>
+              <button class="natural-person__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+              <div class="modal__footer">
+                <button class="modal__btn-underline">Или зарегистрироваться в один клик</button><small class="modal__small">Нажимая на кнопку “зарегистрироваться” вы подтверждаете согласие на обработку персональных данных</small><small class="modal__small">* – поля, обязательные для заполнения</small>
+              </div>
+            </form>
+          </div>
+          <div class="final-natural-person modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Спасибо за регистрацию!</h2>
+              <p class="body-text">На почту отправлено письмо с ссылкой для активации профиля</p><a class="modal__btn-submit primary-button" href="./catalog.html">Перейти в каталог</a>
+              <button class="final-natural-person__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="one-click modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Регистрация в один клик</h2>
+              <div class="modal__input input input_required"><span class="input__title">Телефон</span>
+                <input class="modal__input input__item" type="text" placeholder="Телефон"><span class="input__error">Error message </span>
+              </div>
+              <button class="modal__btn-submit primary-button">Далее</button>
+              <button class="one-click__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+              <button class="modal__btn-underline">К полной регистрации</button>
+            </form>
+          </div>
+          <div class="confirmation-code modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Мы отправили смс на номер +7 977 111 11 11 с кодом подтверждения</h2>
+              <div class="modal__input input input_required"><span class="input__title">Код подтверждения</span>
+                <input class="modal__input input__item" type="text" placeholder="Код подтверждения"><span class="input__error">Error message </span>
+              </div>
+              <button class="modal__btn-submit primary-button">Зарегистрироваться</button>
+              <button class="confirmation-code__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+              <button class="modal__btn-underline">Ничего не пришло, отправьте ещё раз</button>
+              <button class="modal__btn-underline">Ввести другой номер</button>
+            </form>
+          </div>
+          <div class="final-one-click modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Вы успешно зарегистрировались!</h2>
+              <button class="modal__btn-submit primary-button">В каталог</button>
+              <button class="modal__btn-submit secondary-button">Заполните профиль и получите 10 баллов</button>
+              <button class="final-one-click__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="registration-with-inn modal disabled">
+            <div class="modal__form">
+              <h2 class="modal__title">Регистрация косметолога</h2>
+              <div class="registration-with-inn__input input"><span class="input__title">ФИО</span>
+                <input class="registration-with-inn__input input__item" type="text" placeholder="ФИО"><span class="input__error">error message </span>
+              </div>
+              <div class="registration-with-inn__input input input_required"><span class="input__title">Телефон</span>
+                <input class="registration-with-inn__input input__item" type="text" placeholder="Телефон"><span class="input__error">error message </span>
+              </div>
+              <div class="registration-with-inn__input input input_required"><span class="input__title">E-mail</span>
+                <input class="registration-with-inn__input input__item" type="text" placeholder="E-mail"><span class="input__error">error message </span>
+              </div>
+              <div class="registration-with-inn__input input input_required"><span class="input__title">Пароль</span>
+                <input class="registration-with-inn__input input__item" type="text" placeholder="Пароль"><span class="input__error">error message </span>
+              </div>
+              <div class="registration-with-inn__input input input_required"><span class="input__title">ИНН</span>
+                <input class="registration-with-inn__input input__item" type="text" placeholder="ИНН"><span class="input__error">error message </span>
+              </div>
+              <div class="registration-with-inn__select select">
+                <select class="select__item">
+                  <option class="section__option" value="null">Выбрать город</option>
+                  <option class="section__option" value="Москва">Москва</option>
+                  <option class="section__option" value="Питер">Санкт-Петербург</option>
+                  <option class="section__option" value="Оренбург">Оренбург</option>
+                </select>
+              </div><span class="registration-with-inn__input-title">Загрузите файлы, подтверждающие, что Вы являетесь косметологом</span>
+              <label class="registration-with-inn__upload-files upload-files">
+                <input class="upload-files__input upload-files__input_hide" type="file">
+              </label>
+              <button class="registration-with-inn__btn-submit primary-button">Зарегистрироваться</button><span class="modal__small">Нажимая на кнопку “зарегистрироваться” вы подтверждаете согласие на обработку персональных данных</span><span class="modal__small">– поля, обязательные для заполнения</span>
+              <button class="registration-with-inn__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="ask modal disabled">
+            <form class="modal__form">
+              <h2 class="modal__title">Есть вопросы?</h2>
+              <p class="body-text">Оставьте заявку, мы перезвоним и проконсультируем вас.</p>
+              <div class="modal__input input"><span class="input__title">Имя</span>
+                <input class="modal__input input__item" type="text" placeholder="Имя"><span class="input__error">error message </span>
+              </div>
+              <div class="modal__input input"><span class="input__title">Номер телефона</span>
+                <input class="modal__input input__item" type="text" placeholder="Номер телефона"><span class="input__error">error message </span>
+              </div>
+              <button class="modal__btn-submit primary-button">Отправить</button>
+              <button class="ask__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="ask modal disabled disabled">
+            <div class="modal__form">
+              <h2 class="ask__title">Ваша заявка успешно отправлена!</h2>
+              <p class="body-text">Мы свяжемся с Вами в ближайшее время</p>
+              <button class="ask__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="final-subscribe modal disabled">
+            <div class="modal__form final-subscribe__wrapper">
+              <h2 class="final-subscribe__title">Спасибо за подписку!</h2>
+              <p class="body-text">Скоро расскажем Вам о наших акциях и новинках</p>
+              <button class="final-subscribe__btn-close modal__btn-close" type="button">
+                <svg class="modal__btn-close-svg">
+                  <use xlink:href="./images/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="bread-crumbs wrapper"><a class="bread-crumbs__link" href="./index.html">Главная</a><a class="bread-crumbs__link" href="/cart.html">Корзина</a>
+      </div>
+      <div class="cart__wrapper wrapper"> 
+        <h1 class="cart__title page-title">корзина(<span class="cart__count-product">5</span>)</h1>
+        <div class="products-cart">
+          <div class="products-cart__card"> <img class="products-cart__illustration" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="лимфодренажное массажное масло для лица"><a class="products-cart__link" href="#">лимфодренажное массажное масло для лица moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="products-cart__model">Модель: 1412</span><span class="products-cart__cost">2 550</span>
+            <div class="products-cart__counter counter"> 
+              <button class="counter__btn">-</button>
+              <input class="counter__input" type="number" value="1" min="1">
+              <button class="counter__btn">+ </button>
+            </div><span class="products-cart__threshold-amount">ВСЕГО: 5 100 ₽</span>
+            <button class="products-cart__btn-remove"></button>
+          </div>
+          <div class="products-cart__card"> <img class="products-cart__illustration" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="лимфодренажное массажное масло для лица"><a class="products-cart__link" href="#">лимфодренажное массажное масло для лица moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="products-cart__model">Модель: 1412</span><span class="products-cart__cost">2 550</span>
+            <div class="products-cart__counter counter"> 
+              <button class="counter__btn">-</button>
+              <input class="counter__input" type="number" value="1" min="1">
+              <button class="counter__btn">+ </button>
+            </div><span class="products-cart__threshold-amount">ВСЕГО: 5 100 ₽</span>
+            <button class="products-cart__btn-remove"></button>
+          </div>
+          <div class="products-cart__card"> <img class="products-cart__illustration" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="лимфодренажное массажное масло для лица"><a class="products-cart__link" href="#">лимфодренажное массажное масло для лица moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="products-cart__model">Модель: 1412</span><span class="products-cart__cost">2 550</span>
+            <div class="products-cart__counter counter"> 
+              <button class="counter__btn">-</button>
+              <input class="counter__input" type="number" value="1" min="1">
+              <button class="counter__btn">+ </button>
+            </div><span class="products-cart__threshold-amount">ВСЕГО: 5 100 ₽</span>
+            <button class="products-cart__btn-remove"></button>
+          </div>
+          <div class="products-cart__card"> <img class="products-cart__illustration" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="лимфодренажное массажное масло для лица"><a class="products-cart__link" href="#">лимфодренажное массажное масло для лица moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="products-cart__model">Модель: 1412</span><span class="products-cart__cost">2 550</span>
+            <div class="products-cart__counter counter"> 
+              <button class="counter__btn">-</button>
+              <input class="counter__input" type="number" value="1" min="1">
+              <button class="counter__btn">+ </button>
+            </div><span class="products-cart__threshold-amount">ВСЕГО: 5 100 ₽</span>
+            <button class="products-cart__btn-remove"></button>
+          </div>
+          <div class="products-cart__card"> <img class="products-cart__illustration" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="лимфодренажное массажное масло для лица"><a class="products-cart__link" href="#">лимфодренажное массажное масло для лица moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="products-cart__model">Модель: 1412</span><span class="products-cart__cost">2 550</span>
+            <div class="products-cart__counter counter"> 
+              <button class="counter__btn">-</button>
+              <input class="counter__input" type="number" value="1" min="1">
+              <button class="counter__btn">+ </button>
+            </div><span class="products-cart__threshold-amount">ВСЕГО: 5 100 ₽</span>
+            <button class="products-cart__btn-remove"></button>
+          </div>
+        </div>
+        <div class="cart__results">
+          <div class="ordering-options">
+            <h2 class="ordering-options__total-amount">9 765 ₽</h2><span class="ordering-options__count-product">5 позиций</span>
+            <div class="ordering-options__points-wrapper">
+              <h3 class="ordering-options__points-toggle">списать баллы</h3><span class="ordering-options__count-points">На вашем счету 250 баллов</span>
+              <div class="ordering-options__input input"><span class="input__title">Списать баллы</span>
+                <input class="ordering-options__input input__item" type="text" placeholder="Введите количество баллов"><span class="input__error">error message </span>
+              </div>
+              <button class="ordering-options__deduct-points">списать баллы</button>
+            </div>
+            <div class="ordering-options__input input"><span class="input__title">Промокод</span>
+              <input class="ordering-options__input input__item" type="text" placeholder="Введите промокод"><span class="input__error">error message </span>
+            </div>
+            <button class="ordering-options__start-registration">начать оформление
+              <svg class="ordering-options__svg">
+                <use xlink:href="./images/sprite.svg#right-arrow2"></use>
+              </svg>
+            </button>
+            <button class="ordering-options__buy-one-click">купить в один клик</button>
+          </div>
+          <div class="great-deals"><span class="great-deals__button">БЕСПЛАТНАЯ доставка при заказе от 3 000</span><span class="great-deals__button">Добавьте 1 790р. и выберите подарок</span></div><a class="cart__link-catalog primary-button" href="/catalog.html">продолжить покупки</a>
+        </div>
+        <div class="cart__categoryes">
+          <div class="category">
+            <label class="category__label primary-tabs"> похожие товары
+              <input class="category__input primary-tabs__input" type="radio" name="category" value="similar-products" checked>
+            </label>
+            <label class="category__label primary-tabs"> с этим товаром покупают
+              <input class="category__input primary-tabs__input" type="radio" name="category" value="also-buy">
+            </label>
+            <label class="category__label primary-tabs"> последние просмотренные
+              <input class="category__input primary-tabs__input" type="radio" name="category" value="last-viewed">
+            </label>
+          </div>
+          <div class="carousel">
+            <div class="carousel__cards">
+              <div class="card carousel__card">
+                <div class="card__tags tags"> <span class="card__tags-item tags__item">акция</span><span class="card__tags-item tags__item">новинка</span></div><img class="card__illustration" src="./images/products/moisturingBodyMilk.jpg" alt="Фотография продукта"><a class="card__link" href="/product.html">MOISTURIZING BODY MILK/ УВЛАЖНЯЮЩЕЕ МОЛОЧКО ДЛЯ ТЕЛА</a><span class="card__cost">1 650</span>
+                <div class="card__buttons"> 
+                  <button class="card__btn card__btn_favorite card__btn_favorite_selected" aria-label="add to favorite"><span class="card__btn-text">Добавить в избранное</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <button class="card__btn card__btn_to-cart" aria-label="add to cart"><span class="card__btn-text">Добавить в корзину</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card carousel__card">
+                <div class="card__tags tags"> <span class="card__tags-item tags__item">акция</span><span class="card__tags-item tags__item">новинка</span></div><img class="card__illustration" src="./images/products/moisturingBodyMilk.jpg" alt="Фотография продукта"><a class="card__link" href="/product.html">MOISTURIZING BODY MILK/ УВЛАЖНЯЮЩЕЕ МОЛОЧКО ДЛЯ ТЕЛА</a><span class="card__cost">1 650</span>
+                <div class="card__buttons"> 
+                  <button class="card__btn card__btn_favorite card__btn_favorite_selected" aria-label="add to favorite"><span class="card__btn-text">Добавить в избранное</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <button class="card__btn card__btn_to-cart" aria-label="add to cart"><span class="card__btn-text">Добавить в корзину</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card carousel__card">
+                <div class="card__tags tags"> <span class="card__tags-item tags__item">акция</span><span class="card__tags-item tags__item">новинка</span></div><img class="card__illustration" src="./images/products/moisturingBodyMilk.jpg" alt="Фотография продукта"><a class="card__link" href="/product.html">MOISTURIZING BODY MILK/ УВЛАЖНЯЮЩЕЕ МОЛОЧКО ДЛЯ ТЕЛА</a><span class="card__cost">1 650</span>
+                <div class="card__buttons"> 
+                  <button class="card__btn card__btn_favorite card__btn_favorite_selected" aria-label="add to favorite"><span class="card__btn-text">Добавить в избранное</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <button class="card__btn card__btn_to-cart" aria-label="add to cart"><span class="card__btn-text">Добавить в корзину</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="card carousel__card">
+                <div class="card__tags tags"> <span class="card__tags-item tags__item">акция</span><span class="card__tags-item tags__item">новинка</span></div><img class="card__illustration" src="./images/products/moisturingBodyMilk.jpg" alt="Фотография продукта"><a class="card__link" href="/product.html">MOISTURIZING BODY MILK/ УВЛАЖНЯЮЩЕЕ МОЛОЧКО ДЛЯ ТЕЛА</a><span class="card__cost">1 650</span>
+                <div class="card__buttons"> 
+                  <button class="card__btn card__btn_favorite card__btn_favorite_selected" aria-label="add to favorite"><span class="card__btn-text">Добавить в избранное</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                  <button class="card__btn card__btn_to-cart" aria-label="add to cart"><span class="card__btn-text">Добавить в корзину</span>
+                    <svg class="card__svg">
+                      <use xlink:href="./images/sprite.svg#cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel__swiper-navigations">
+              <div class="carousel__button-prev carousel__swiper-btn">
+                <svg class="carousel__swiper-svg">
+                  <use xlink:href="./images/sprite.svg#btn-prev"></use>
+                </svg>
+              </div>
+              <div class="carousel__button-next carousel__swiper-btn">
+                <svg class="carousel__swiper-svg">
+                  <use xlink:href="./images/sprite.svg#btn-next"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper"> <a class="footer__logo" href="#" aria-label="К началу сайта"> </a>
+        <ul class="footer__media-links footer__media-links_mobile">
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
+        </ul>
+        <div class="footer__items"> 
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">о компании</h3><a class="footer__link" href="#">Контакты</a><a class="footer__link" href="#">Реквизиты</a><a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Обработка персональных данных</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">покупателям</h3><a class="footer__link" href="#">Как сделать заказ</a><a class="footer__link" href="#">Способы оплаты</a><a class="footer__link" href="#">Доставка</a><a class="footer__link" href="#">Правила продажи</a><a class="footer__link" href="#">Сотрудничество</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">Каталог</h3><a class="footer__link" href="#">Angiopharm</a><a class="footer__link" href="#">Остальные товары</a><a class="footer__link" href="#">Скачать каталог</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">контакты</h3><a class="footer__link" href="#">г.Новосибирск, ул.Героев труда, д.19Б</a><a class="footer__link" href="#">8 (383) 310-54-74</a><a class="footer__link" href="#">zakaz@angiofarm.com</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">Получайте новостные E-mail уведомления о наших новинках и акциях</h3>
+            <form class="footer__subscribe" action="#">
+              <div class="footer__input input"><span class="input__title">Ваш E-mail</span>
+                <input class="footer__input-item input__item" type="text" placeholder="Ваш E-mail"><span class="input__error">error message </span>
+              </div>
+              <button class="footer__subscribe-btn primary-button primary-button_small">Подписаться</button>
+            </form>
+            <div class="footer__wrapper-media">
+              <h3 class="footer__item-title">оставайтесь с нами на связи</h3>
+              <ul class="footer__media-links"> 
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
+              </ul>
+            </div><a class="footer__partners-baner" href="#"></a>
+          </div>
+        </div>
+        <div class="footer__informative-links">
+          <div class="footer__payment-methods"><a class="footer__payment-method footer__payment-method_visa" href="#" aria-label="visa"></a><a class="footer__payment-method footer__payment-method_mastercard" href="#" aria-label="mastercard"></a><a class="footer__payment-method footer__payment-method_mir" href="#" aria-label="Мир"></a><a class="footer__payment-method footer__payment-method_bank" href="#" aria-label="Расчетный счет"></a></div>
+          <div class="footer__delivery-methods"><a class="footer__delivery-method footer__delivery-method_cdek" href="#" aria-label="cdek"> </a><a class="footer__delivery-method footer__delivery-method_russian-post" href="#" aria-label="Почта россии"> </a></div>
+        </div>
+      </div><small class="footer__copyright">Интернет-магазин "Ангиофарм" © ООО ФармоГель, 2021</small>
+    </footer>
+    <script defer src="js/common.js"></script>
+    <script defer src="js/cart.js"></script>
+  </body>
+</html>

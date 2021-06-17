@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Angiopharm</title>
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/making-order.css">
   </head>
   <body>
     <header class="header"> 
@@ -262,181 +262,195 @@
       </div>
     </header>
     <main class="main">
-      <section class="product-banner">
-        <div class="product-banner__wrapper wrapper"> 
-          <div class="product-banner__text"> 
-            <h2 class="product-banner__title">Микропилинг</h2>
-            <p class="product-banner__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-            <button class="product-banner__btn">В каталог</button>
-          </div><img class="product-banner__image" src="./images/product-banner/product-banner.jpg" alt="Фотография средства для микропилинга">
-        </div>
-      </section>
-      <div class="about-laboratory">
-        <div class="about-laboratory__wrapper wrapper"> 
-          <p class="about-laboratory__text">
-            <strong>Лаборатория АНГИОФАРМ</strong> — производитель профессиональной уходовой косметики.<br>Группа компаний «Ангиофарм» была создана на базе лабораторий, занимающихся разработкой и производством продуктов для поддержания красоты, здоровья и молодости кожи. В основе препаратов – собственная разработка компании, рекомбинантный ангиогенин (фактор роста капилляров).<br>
-            Производство и главный офис компании находятся в наукограде Кольцово, Новосибирск. 
-          </p>
-        </div>
+      <div class="bread-crumbs wrapper"><a class="bread-crumbs__link" href="./index.html">Главная</a><a class="bread-crumbs__link" href="/cart.html">Корзина</a><a class="bread-crumbs__link" href="#">Оформление заказа</a>
       </div>
-      <section class="about"> 
-        <div class="about__wrapper wrapper"> 
-          <h2 class="about__title title-section">Ангиофарм</h2>
-          <div class="about__items"> 
-            <div class="about__item"> 
-              <p class="about__text body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi&nbsp;ut</p>
-            </div>
-            <div class="about__item"> 
-              <p class="about__text body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi&nbsp;ut</p>
-            </div>
-            <div class="about__item"> 
-              <p class="about__text body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi&nbsp;ut</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="popular-products">
-        <div class="popular-products__wrapper wrapper"> 
-          <h2 class="popular-products__title title-section">выбор покупателей</h2>
-          <div class="popular-products__items"> 
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">акции</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
+      <div class="making-order wrapper"> 
+        <h2 class="making-order__page-title title-section">Оформление заказа</h2>
+        <form class="making-order__form"> 
+          <div class="making-order__item">
+            <h3 class="making-order__item-name">Данные получателя</h3>
+            <div class="making-order__inputs-group">
+              <div class="making-order__input input input_required"><span class="input__title">Имя</span>
+                <input class="making-order__input input__item" type="text" placeholder="Имя"><span class="input__error">error message </span>
               </div>
-            </div>
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">Новинки</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
+              <div class="making-order__input input"><span class="input__title">Фамилия</span>
+                <input class="making-order__input input__item" type="text" placeholder="Фамилия"><span class="input__error">error message </span>
               </div>
-            </div>
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">Для тела</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
+              <div class="making-order__input input"><span class="input__title">E-mail</span>
+                <input class="making-order__input input__item" type="text" placeholder="E-mail"><span class="input__error">error message </span>
               </div>
-            </div>
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">Чувствительная кожа</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
+              <div class="making-order__input input input_required"><span class="input__title">Телефон</span>
+                <input class="making-order__input input__item" type="text" placeholder="Телефон"><span class="input__error">error message </span>
               </div>
+              <label class="making-order__label-checkbox">Я ознакомлен(а) с политикой обработки персональных данных
+                <input class="making-order__input-checkbox" type="checkbox">
+              </label>
             </div>
           </div>
+          <div class="making-order__item">
+            <h3 class="making-order__item-name">Доставка</h3>
+            <div class="making-order__inputs-group">
+              <div class="making-order__select select select_focus"><span class="select__label">Город</span>
+                <select class="select__item"> 
+                  <option class="section__option" value="null">Выбрать город</option>
+                  <option class="section__option" value="Москва">Москва</option>
+                  <option class="section__option" value="Питер">Санкт-Петербург</option>
+                  <option class="section__option" value="Оренбург">Оренбург</option>
+                </select>
+              </div>
+              <div class="making-order__input input input_required"><span class="input__title">Улица, дом, кв.</span>
+                <input class="making-order__input input__item" type="text" placeholder="Улица, дом, кв."><span class="input__error">error message </span>
+              </div>
+              <div class="making-order__select select select_focus"><span class="select__label">Способ доставки</span>
+                <select class="select__item"> 
+                  <option class="section__option" value="null">Выбрать способ доставки</option>
+                  <option class="section__option" value="">Доставка куръром. Оплата...</option>
+                  <option class="section__option" value="Питер">Доставка почтой.</option>
+                  <option class="section__option" value="Оренбург">Самовывоз.</option>
+                </select>
+              </div>
+              <p class="making-order__text body-text">Ориентировочная дата доставки: 21.06.2021</p>
+              <p class="making-order__text body-text">Ориентировочная стоимость доставки: 500р</p>
+            </div>
+          </div>
+          <div class="making-order__item">
+            <h3 class="making-order__item-name">Способы оплаты</h3>
+            <div class="making-order__inputs-group" id="payment-methods">
+              <label class="radio-payment radio-payment_checked making-order__payment" for="payment-card">Оплата Картой
+                <svg class="radio-payment__svg">
+                  <use xlink:href="./images/sprite.svg#CreditCard"></use>
+                </svg>
+                <input class="radio-payment__input" type="radio" name="payment-method" id="payment-card" value="card" checked>
+              </label>
+              <label class="radio-payment making-order__payment" for="payment-bank">Банковский перевод
+                <svg class="radio-payment__svg">
+                  <use xlink:href="./images/sprite.svg#Receipt"></use>
+                </svg>
+                <input class="radio-payment__input" type="radio" name="payment-method" id="payment-bank" value="bank-transfer">
+              </label>
+              <label class="radio-payment making-order__payment" for="payment-receipt">Оплата при получении
+                <svg class="radio-payment__svg">
+                  <use xlink:href="./images/sprite.svg#Money"></use>
+                </svg>
+                <input class="radio-payment__input" type="radio" name="payment-method" id="payment-receipt" value="payment-upon-receipt">
+              </label>
+            </div>
+          </div>
+          <div class="making-order__item">
+            <h3 class="making-order__item-name">Комментарий к заказу</h3>
+            <div class="making-order__inputs-group">
+              <textarea class="making-order__comment" name="comment"></textarea>
+            </div>
+          </div>
+          <div class="making-order__item">
+            <div class="making-order__inputs-group">
+              <table class="making-order__table"> 
+                <tr class="making-order__table-row"> 
+                  <td class="making-order__table-data">Стоимость товаров:</td>
+                  <td class="making-order__table-data">9 765 ₽</td>
+                </tr>
+                <tr class="making-order__table-row"> 
+                  <td class="making-order__table-data">Скидка:</td>
+                  <td class="making-order__table-data">100 ₽</td>
+                </tr>
+                <tr class="making-order__table-row"> 
+                  <td class="making-order__table-data">Доставка:</td>
+                  <td class="making-order__table-data">0 ₽</td>
+                </tr>
+                <tr class="making-order__table-row"> 
+                  <td class="making-order__total-payable">Итого к оплате:</td>
+                  <td class="making-order__total-maney">9 765 ₽</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <button class="making-order__btn-submit">Оформить заказ
+            <svg class="making-order__submit-svg">
+              <use xlink:href="./images/sprite.svg#right-arrow2"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="order-final disabled wrapper"> <span class="making-order__page-title title-section">Спасибо за заказ</span><span class="order-final__bonus">Вам начислено 20 баллов</span>
+        <p class="body-text order-final__text">Номер вашего заказа №11111111</p>
+        <p class="body-text order-final__text">Информация выслана на почту user@gmail.com</p>
+        <p class="body-text order-final__text">Мы вышлем вам информацию о движении вашего заказа на почту и смс.</p>
+        <div class="order-final__items"> 
+          <h2 class="order-final__sub-title">Ваш заказ</h2>
+          <button class="order-final__show-btn">закрыть
+            <svg class="order-final__show-btn-svg">
+              <use xlink:href="./images/sprite.svg#arrow-down"></use>
+            </svg>
+          </button>
+          <div class="order-final__item"> <img class="order-final__item-photo" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="Фотография товара"><a class="order-final__item-name" href="#">moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="order-final__item-cost">2 550 ₽</span></div>
+          <div class="order-final__item"> <img class="order-final__item-photo" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="Фотография товара"><a class="order-final__item-name" href="#">moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="order-final__item-cost">2 550 ₽</span></div>
+          <div class="order-final__item"> <img class="order-final__item-photo" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="Фотография товара"><a class="order-final__item-name" href="#">moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="order-final__item-cost">2 550 ₽</span></div>
+          <div class="order-final__item"> <img class="order-final__item-photo" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="Фотография товара"><a class="order-final__item-name" href="#">moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="order-final__item-cost">2 550 ₽</span></div>
+          <div class="order-final__item"> <img class="order-final__item-photo" src="./images/products/moisturizingProtectiveCreamSPF50.jpg" alt="Фотография товара"><a class="order-final__item-name" href="#">moisturizing protective cream spf 50/ увлажняющий защитный крем spf 50</a><span class="order-final__item-cost">2 550 ₽</span></div>
         </div>
-      </section>
-      <section class="news-media">
-        <div class="news-media__wrapper wrapper"> 
-          <h2 class="news-media__title title-section">Новости и&nbsp;партнеры</h2>
-          <div class="news-media__items"> 
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image1.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image2.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image3.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image4.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-          </div>
-        </div>
-        <button class="news-media__more secondary-button">Читать все</button>
-      </section>
-      <section class="media">
-        <div class="media__wrapper wrapper"> 
-          <h2 class="media__title title-section">МЕДИА и&nbsp;сми</h2>
-          <div class="media__items"> 
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image1.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image2.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image3.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image4.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-          </div>
-        </div>
-        <button class="media__more secondary-button">Читать все</button>
-      </section>
-      <section class="bonuses">
-        <div class="bonuses__wrapper wrapper"> 
-          <div class="bonuses__text-block">
-            <h2 class="bonuses__title">БОНУСЫ ЗА КАЖДЫЙ ЗАКАЗ</h2>
-            <p class="bonuses__paragraph body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  ipsum </p>
-            <button class="bonuses__btn secondary-button">Перейти к покупкам</button>
-          </div>
-        </div>
-      </section>
-      <section class="any-questions">
-        <div class="any-questions__wrapper wrapper"> 
-          <h2 class="any-questions__title">Есть вопросы?</h2>
-          <p class="any-questions__paragraph body-text">Оставьте заявку, мы перезвоним и проконсультируем вас.</p>
-          <form class="any-questions__form">
-            <div class="any-questions__input input"><span class="input__title">Имя</span>
-              <input class="any-questions__input input__item" type="text" placeholder="Имя"><span class="input__error">error message </span>
-            </div>
-            <div class="any-questions__input input"><span class="input__title">Номер телефона</span>
-              <input class="any-questions__input input__item" type="text" placeholder="Номер телефона"><span class="input__error">error message </span>
-            </div>
-            <button class="any-questions__btn primary-button">Отправить</button>
-          </form>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__wrapper wrapper"> <a class="footer__logo" href="#" aria-label="К началу сайта"> </a>
-          <ul class="footer__media-links footer__media-links_mobile">
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
-          </ul>
-          <div class="footer__items"> 
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">о компании</h3><a class="footer__link" href="#">Контакты</a><a class="footer__link" href="#">Реквизиты</a><a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Обработка персональных данных</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">покупателям</h3><a class="footer__link" href="#">Как сделать заказ</a><a class="footer__link" href="#">Способы оплаты</a><a class="footer__link" href="#">Доставка</a><a class="footer__link" href="#">Правила продажи</a><a class="footer__link" href="#">Сотрудничество</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">Каталог</h3><a class="footer__link" href="#">Angiopharm</a><a class="footer__link" href="#">Остальные товары</a><a class="footer__link" href="#">Скачать каталог</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">контакты</h3><a class="footer__link" href="#">г.Новосибирск, ул.Героев труда, д.19Б</a><a class="footer__link" href="#">8 (383) 310-54-74</a><a class="footer__link" href="#">zakaz@angiofarm.com</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">Получайте новостные E-mail уведомления о наших новинках и акциях</h3>
-              <form class="footer__subscribe" action="#">
-                <div class="footer__input input"><span class="input__title">Ваш E-mail</span>
-                  <input class="footer__input-item input__item" type="text" placeholder="Ваш E-mail"><span class="input__error">error message </span>
-                </div>
-                <button class="footer__subscribe-btn primary-button primary-button_small">Подписаться</button>
-              </form>
-              <div class="footer__wrapper-media">
-                <h3 class="footer__item-title">оставайтесь с нами на связи</h3>
-                <ul class="footer__media-links"> 
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
-                </ul>
-              </div><a class="footer__partners-baner" href="#"></a>
-            </div>
-          </div>
-          <div class="footer__informative-links">
-            <div class="footer__payment-methods"><a class="footer__payment-method footer__payment-method_visa" href="#" aria-label="visa"></a><a class="footer__payment-method footer__payment-method_mastercard" href="#" aria-label="mastercard"></a><a class="footer__payment-method footer__payment-method_mir" href="#" aria-label="Мир"></a><a class="footer__payment-method footer__payment-method_bank" href="#" aria-label="Расчетный счет"></a></div>
-            <div class="footer__delivery-methods"><a class="footer__delivery-method footer__delivery-method_cdek" href="#" aria-label="cdek"> </a><a class="footer__delivery-method footer__delivery-method_russian-post" href="#" aria-label="Почта россии"> </a></div>
-          </div>
-        </div><small class="footer__copyright">Интернет-магазин "Ангиофарм" © ООО ФармоГель, 2021</small>
-      </footer>
+        <table class="order-final__table"> 
+          <tr class="order-final__table-row"> 
+            <td class="order-final__table-data">Сумма:</td>
+            <td class="order-final__table-data">9 765 ₽</td>
+          </tr>
+          <tr class="order-final__table-row"> 
+            <td class="order-final__table-data">Доставка:</td>
+            <td class="order-final__table-data">0 ₽</td>
+          </tr>
+          <tr class="order-final__table-row"> 
+            <td class="order-final__table-data">Оплата:</td>
+            <td class="order-final__table-data">Картой онлайн</td>
+          </tr>
+        </table><span class="order-final__total-amount">Итого: 9 765 ₽</span><a class="order-final__link-to-main" href="/index.html">вернуться на главную</a>
+      </div>
     </main>
+    <footer class="footer">
+      <div class="footer__wrapper wrapper"> <a class="footer__logo" href="#" aria-label="К началу сайта"> </a>
+        <ul class="footer__media-links footer__media-links_mobile">
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
+          <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
+        </ul>
+        <div class="footer__items"> 
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">о компании</h3><a class="footer__link" href="#">Контакты</a><a class="footer__link" href="#">Реквизиты</a><a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Обработка персональных данных</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">покупателям</h3><a class="footer__link" href="#">Как сделать заказ</a><a class="footer__link" href="#">Способы оплаты</a><a class="footer__link" href="#">Доставка</a><a class="footer__link" href="#">Правила продажи</a><a class="footer__link" href="#">Сотрудничество</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">Каталог</h3><a class="footer__link" href="#">Angiopharm</a><a class="footer__link" href="#">Остальные товары</a><a class="footer__link" href="#">Скачать каталог</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">контакты</h3><a class="footer__link" href="#">г.Новосибирск, ул.Героев труда, д.19Б</a><a class="footer__link" href="#">8 (383) 310-54-74</a><a class="footer__link" href="#">zakaz@angiofarm.com</a>
+          </div>
+          <div class="footer__item"> 
+            <h3 class="footer__item-title">Получайте новостные E-mail уведомления о наших новинках и акциях</h3>
+            <form class="footer__subscribe" action="#">
+              <div class="footer__input input"><span class="input__title">Ваш E-mail</span>
+                <input class="footer__input-item input__item" type="text" placeholder="Ваш E-mail"><span class="input__error">error message </span>
+              </div>
+              <button class="footer__subscribe-btn primary-button primary-button_small">Подписаться</button>
+            </form>
+            <div class="footer__wrapper-media">
+              <h3 class="footer__item-title">оставайтесь с нами на связи</h3>
+              <ul class="footer__media-links"> 
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
+                <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
+              </ul>
+            </div><a class="footer__partners-baner" href="#"></a>
+          </div>
+        </div>
+        <div class="footer__informative-links">
+          <div class="footer__payment-methods"><a class="footer__payment-method footer__payment-method_visa" href="#" aria-label="visa"></a><a class="footer__payment-method footer__payment-method_mastercard" href="#" aria-label="mastercard"></a><a class="footer__payment-method footer__payment-method_mir" href="#" aria-label="Мир"></a><a class="footer__payment-method footer__payment-method_bank" href="#" aria-label="Расчетный счет"></a></div>
+          <div class="footer__delivery-methods"><a class="footer__delivery-method footer__delivery-method_cdek" href="#" aria-label="cdek"> </a><a class="footer__delivery-method footer__delivery-method_russian-post" href="#" aria-label="Почта россии"> </a></div>
+        </div>
+      </div><small class="footer__copyright">Интернет-магазин "Ангиофарм" © ООО ФармоГель, 2021</small>
+    </footer>
     <script defer src="js/common.js"></script>
+    <script defer src="js/making-order.js"></script>
   </body>
 </html>
