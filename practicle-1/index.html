@@ -1,442 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angiopharm</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/index.css">
-  </head>
-  <body>
-    <header class="header"> 
-      <div class="header__wrapper wrapper"> <a class="header__logotip" href="#"></a>
-        <button class="header__burger-menu">Меню</button>
-        <nav class="header__navitation"> <a class="header__item-navigation" href="/catalog.html">Каталог</a><a class="header__item-navigation" href="/cooperation.html">Сотрудничество</a>
-          <button class="header__callback-btn secondary-button secondary-button_small">обратный звонок</button>
-          <div class="header__login-btns"> 
-            <button class="header__login-btn header__login-btn_personal-account">Личный кабинет</button>
-            <button class="header__login-btn disabled">вход</button>
-            <button class="header__login-btn disabled">регистрация</button>
-          </div>
-        </nav>
-        <div class="header__right-buttons">
-          <form class="search" action="#">
-            <input class="search__input" type="search">
-            <button class="search__btn"> </button>
-          </form>
-          <button class="header__right-btn header__right-btn_favorite" aria-label="Избранное"><span class="header__right-btn-counter">14</span></button>
-          <button class="header__right-btn header__right-btn_cart" aria-label="Корзина"><span class="header__right-btn-counter">2</span></button>
-        </div>
-      </div>
-      <div class="modals">
-        <div class="login"> 
-          <div class="login modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Войти в личный кабинет</h2>
-              <div class="modal__input input"><span class="input__title">E-mail</span>
-                <input class="modal__input input__item" type="text" placeholder="E-mail"><span class="input__error">Пользователя с таким E-mail не существует </span>
-              </div>
-              <div class="modal__password password"><span class="password__title">Пароль</span>
-                <input class="modal__input password__item" type="password" placeholder="Пароль"><span class="password__error">Проверьте пароль еще раз </span>
-                <button class="password__toggle-show" type="button"></button>
-              </div>
-              <button class="modal__btn-submit primary-button">Войти</button>
-              <button class="login__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-              <div class="modal__footer">
-                <button class="modal__forgot-password body-text">Забыли пароль?</button><span class="modal__text">Нет аккаунта?</span>
-                <button class="body-text">Зарегистрируйтесь сейчас</button>
-              </div>
-            </form>
-          </div>
-          <div class="forgot-password modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Восстановление пароля</h2>
-              <p class="body-text">Введите e-mail. На вашу почту придет письмо со ссылкой для создания нового пароля.</p>
-              <div class="modal__input input"><span class="input__title">E-mail</span>
-                <input class="modal__input input__item" type="text" placeholder="E-mail"><span class="input__error">Пользователя с таким E-mail не существует </span>
-              </div>
-              <button class="modal__btn-submit primary-button">Отправить</button>
-              <button class="forgot-password__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <div class="create-new-login modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Создайте новый пароль</h2>
-              <p class="body-text">Ваш пароль успешно сброшен, придумайте новый.</p>
-              <div class="modal__password password"><span class="password__title">Новый пароль</span>
-                <input class="modal__input password__item" type="password" placeholder="Новый пароль"><span class="password__error">Не короче х-символов </span>
-                <button class="password__toggle-show" type="button"></button>
-              </div>
-              <div class="modal__password password"><span class="password__title">Повторите пароль</span>
-                <input class="modal__input password__item" type="password" placeholder="Повторите пароль"><span class="password__error">Пароли не совпадают </span>
-                <button class="password__toggle-show" type="button"></button>
-              </div>
-              <button class="modal__btn-submit primary-button">Сохранить</button>
-              <button class="create-new-login__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <div class="final modal disabled">
-            <div class="modal__form">
-              <h2 class="final__title">Новый пароль успешно сохранен!</h2>
-              <button class="final__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="registration"> 
-          <div class="natural-person modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Регистрация нового пользователя</h2>
-              <div class="modal__input input input_required"><span class="input__title">ФИО</span>
-                <input class="modal__input input__item" type="text" placeholder="ФИО"><span class="input__error">Укажите ФИО</span>
-              </div>
-              <div class="modal__input input input_required"><span class="input__title">Телефон</span>
-                <input class="modal__input input__item" type="text" placeholder="Телефон"><span class="input__error">Укажите номер телефона </span>
-              </div>
-              <div class="modal__input input input_required"><span class="input__title">E-mail</span>
-                <input class="modal__input input__item" type="text" placeholder="E-mail"><span class="input__error">Укажите E-mail</span>
-              </div>
-              <div class="modal__password password"><span class="password__title">Пароль</span>
-                <input class="modal__input password__item" type="password" placeholder="Пароль"><span class="password__error">Слишком простой пароль </span>
-                <button class="password__toggle-show" type="button"></button>
-              </div>
-              <button class="modal__btn-submit primary-button">Зарегистрироваться</button>
-              <button class="natural-person__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-              <div class="modal__footer">
-                <button class="modal__btn-underline">Или зарегистрироваться в один клик</button><small class="modal__small">Нажимая на кнопку “зарегистрироваться” вы подтверждаете согласие на обработку персональных данных</small><small class="modal__small">* – поля, обязательные для заполнения</small>
-              </div>
-            </form>
-          </div>
-          <div class="final-natural-person modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Спасибо за регистрацию!</h2>
-              <p class="body-text">На почту отправлено письмо с ссылкой для активации профиля</p><a class="modal__btn-submit primary-button" href="./catalog.html">Перейти в каталог</a>
-              <button class="final-natural-person__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <div class="one-click modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Регистрация в один клик</h2>
-              <div class="modal__input input input_required"><span class="input__title">Телефон</span>
-                <input class="modal__input input__item" type="text" placeholder="Телефон"><span class="input__error">Error message </span>
-              </div>
-              <button class="modal__btn-submit primary-button">Далее</button>
-              <button class="one-click__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-              <button class="modal__btn-underline">К полной регистрации</button>
-            </form>
-          </div>
-          <div class="confirmation-code modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Мы отправили смс на номер +7 977 111 11 11 с кодом подтверждения</h2>
-              <div class="modal__input input input_required"><span class="input__title">Код подтверждения</span>
-                <input class="modal__input input__item" type="text" placeholder="Код подтверждения"><span class="input__error">Error message </span>
-              </div>
-              <button class="modal__btn-submit primary-button">Зарегистрироваться</button>
-              <button class="confirmation-code__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-              <button class="modal__btn-underline">Ничего не пришло, отправьте ещё раз</button>
-              <button class="modal__btn-underline">Ввести другой номер</button>
-            </form>
-          </div>
-          <div class="final-one-click modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Вы успешно зарегистрировались!</h2>
-              <button class="modal__btn-submit primary-button">В каталог</button>
-              <button class="modal__btn-submit secondary-button">Заполните профиль и получите 10 баллов</button>
-              <button class="final-one-click__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <div class="registration-with-inn modal disabled">
-            <div class="modal__form">
-              <h2 class="modal__title">Регистрация косметолога</h2>
-              <div class="registration-with-inn__input input"><span class="input__title">ФИО</span>
-                <input class="registration-with-inn__input input__item" type="text" placeholder="ФИО"><span class="input__error">error message </span>
-              </div>
-              <div class="registration-with-inn__input input input_required"><span class="input__title">Телефон</span>
-                <input class="registration-with-inn__input input__item" type="text" placeholder="Телефон"><span class="input__error">error message </span>
-              </div>
-              <div class="registration-with-inn__input input input_required"><span class="input__title">E-mail</span>
-                <input class="registration-with-inn__input input__item" type="text" placeholder="E-mail"><span class="input__error">error message </span>
-              </div>
-              <div class="registration-with-inn__input input input_required"><span class="input__title">Пароль</span>
-                <input class="registration-with-inn__input input__item" type="text" placeholder="Пароль"><span class="input__error">error message </span>
-              </div>
-              <div class="registration-with-inn__input input input_required"><span class="input__title">ИНН</span>
-                <input class="registration-with-inn__input input__item" type="text" placeholder="ИНН"><span class="input__error">error message </span>
-              </div>
-              <div class="registration-with-inn__select select">
-                <select class="select__item">
-                  <option class="section__option" value="null">Выбрать город</option>
-                  <option class="section__option" value="Москва">Москва</option>
-                  <option class="section__option" value="Питер">Санкт-Петербург</option>
-                  <option class="section__option" value="Оренбург">Оренбург</option>
-                </select>
-              </div><span class="registration-with-inn__input-title">Загрузите файлы, подтверждающие, что Вы являетесь косметологом</span>
-              <label class="registration-with-inn__upload-files upload-files">
-                <input class="upload-files__input upload-files__input_hide" type="file">
-              </label>
-              <button class="registration-with-inn__btn-submit primary-button">Зарегистрироваться</button><span class="modal__small">Нажимая на кнопку “зарегистрироваться” вы подтверждаете согласие на обработку персональных данных</span><span class="modal__small">– поля, обязательные для заполнения</span>
-              <button class="registration-with-inn__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="ask modal disabled">
-            <form class="modal__form">
-              <h2 class="modal__title">Есть вопросы?</h2>
-              <p class="body-text">Оставьте заявку, мы перезвоним и проконсультируем вас.</p>
-              <div class="modal__input input"><span class="input__title">Имя</span>
-                <input class="modal__input input__item" type="text" placeholder="Имя"><span class="input__error">error message </span>
-              </div>
-              <div class="modal__input input"><span class="input__title">Номер телефона</span>
-                <input class="modal__input input__item" type="text" placeholder="Номер телефона"><span class="input__error">error message </span>
-              </div>
-              <button class="modal__btn-submit primary-button">Отправить</button>
-              <button class="ask__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
-          <div class="ask modal disabled disabled">
-            <div class="modal__form">
-              <h2 class="ask__title">Ваша заявка успешно отправлена!</h2>
-              <p class="body-text">Мы свяжемся с Вами в ближайшее время</p>
-              <button class="ask__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="final-subscribe modal disabled">
-            <div class="modal__form final-subscribe__wrapper">
-              <h2 class="final-subscribe__title">Спасибо за подписку!</h2>
-              <p class="body-text">Скоро расскажем Вам о наших акциях и новинках</p>
-              <button class="final-subscribe__btn-close modal__btn-close" type="button">
-                <svg class="modal__btn-close-svg">
-                  <use xlink:href="./images/sprite.svg#cross"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <section class="product-banner">
-        <div class="product-banner__wrapper wrapper"> 
-          <div class="product-banner__text"> 
-            <h2 class="product-banner__title">Микропилинг</h2>
-            <p class="product-banner__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
-            <button class="product-banner__btn">В каталог</button>
-          </div><img class="product-banner__image" src="./images/product-banner/product-banner.jpg" alt="Фотография средства для микропилинга">
-        </div>
-      </section>
-      <div class="about-laboratory">
-        <div class="about-laboratory__wrapper wrapper"> 
-          <p class="about-laboratory__text">
-            <strong>Лаборатория АНГИОФАРМ</strong> — производитель профессиональной уходовой косметики.<br>Группа компаний «Ангиофарм» была создана на базе лабораторий, занимающихся разработкой и производством продуктов для поддержания красоты, здоровья и молодости кожи. В основе препаратов – собственная разработка компании, рекомбинантный ангиогенин (фактор роста капилляров).<br>
-            Производство и главный офис компании находятся в наукограде Кольцово, Новосибирск. 
-          </p>
-        </div>
-      </div>
-      <section class="about"> 
-        <div class="about__wrapper wrapper"> 
-          <h2 class="about__title title-section">Ангиофарм</h2>
-          <div class="about__items"> 
-            <div class="about__item"> 
-              <p class="about__text body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi&nbsp;ut</p>
-            </div>
-            <div class="about__item"> 
-              <p class="about__text body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi&nbsp;ut</p>
-            </div>
-            <div class="about__item"> 
-              <p class="about__text body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi&nbsp;ut</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="popular-products">
-        <div class="popular-products__wrapper wrapper"> 
-          <h2 class="popular-products__title title-section">выбор покупателей</h2>
-          <div class="popular-products__items"> 
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">акции</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
-              </div>
-            </div>
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">Новинки</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
-              </div>
-            </div>
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">Для тела</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
-              </div>
-            </div>
-            <div class="popular-products__item"> <img class="popular-products__item-illustration" src="./images/popular-products/image1.jpg" alt="Иллюстрация продукта">
-              <div class="popular-products__footer"> 
-                <h3 class="popular-products__item-title">Чувствительная кожа</h3><a class="popular-products__btn-catalog" href="#">В каталог</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="news-media">
-        <div class="news-media__wrapper wrapper"> 
-          <h2 class="news-media__title title-section">Новости и&nbsp;партнеры</h2>
-          <div class="news-media__items"> 
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image1.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image2.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image3.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-            <div class="news-media__item"> <img class="news-media__illustration" src="./images/news-media/image4.jpg" alt="Иллюстрация">
-              <h3 class="news-media__item-title">ИМЯ/НАЗВАНИЕ СМИ</h3>
-              <p class="news-media__text body-text">Описание описание описание описание описание описание описание описание описание описание описание описание описание</p><a class="news-media__more-detailed">подробнее</a>
-            </div>
-          </div>
-        </div>
-        <button class="news-media__more secondary-button">Читать все</button>
-      </section>
-      <section class="media">
-        <div class="media__wrapper wrapper"> 
-          <h2 class="media__title title-section">МЕДИА и&nbsp;сми</h2>
-          <div class="media__items"> 
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image1.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image2.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image3.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-            <div class="media__item"> <img class="media__illustration" src="./images/media/image4.png" alt="Иллюстрация">
-              <h3 class="media__item-title">НАЗВАНИЕ СТАТЬИ</h3><a class="media__more-detailed" href="#">Читать далее</a>
-            </div>
-          </div>
-        </div>
-        <button class="media__more secondary-button">Читать все</button>
-      </section>
-      <section class="bonuses">
-        <div class="bonuses__wrapper wrapper"> 
-          <div class="bonuses__text-block">
-            <h2 class="bonuses__title">БОНУСЫ ЗА КАЖДЫЙ ЗАКАЗ</h2>
-            <p class="bonuses__paragraph body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  ipsum </p>
-            <button class="bonuses__btn secondary-button">Перейти к покупкам</button>
-          </div>
-        </div>
-      </section>
-      <section class="any-questions">
-        <div class="any-questions__wrapper wrapper"> 
-          <h2 class="any-questions__title">Есть вопросы?</h2>
-          <p class="any-questions__paragraph body-text">Оставьте заявку, мы перезвоним и проконсультируем вас.</p>
-          <form class="any-questions__form">
-            <div class="any-questions__input input"><span class="input__title">Имя</span>
-              <input class="any-questions__input input__item" type="text" placeholder="Имя"><span class="input__error">error message </span>
-            </div>
-            <div class="any-questions__input input"><span class="input__title">Номер телефона</span>
-              <input class="any-questions__input input__item" type="text" placeholder="Номер телефона"><span class="input__error">error message </span>
-            </div>
-            <button class="any-questions__btn primary-button">Отправить</button>
-          </form>
-        </div>
-      </section>
-      <footer class="footer">
-        <div class="footer__wrapper wrapper"> <a class="footer__logo" href="#" aria-label="К началу сайта"> </a>
-          <ul class="footer__media-links footer__media-links_mobile">
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
-            <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
-          </ul>
-          <div class="footer__items"> 
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">о компании</h3><a class="footer__link" href="#">Контакты</a><a class="footer__link" href="#">Реквизиты</a><a class="footer__link" href="#">Политика конфиденциальности</a><a class="footer__link" href="#">Обработка персональных данных</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">покупателям</h3><a class="footer__link" href="#">Как сделать заказ</a><a class="footer__link" href="#">Способы оплаты</a><a class="footer__link" href="#">Доставка</a><a class="footer__link" href="#">Правила продажи</a><a class="footer__link" href="#">Сотрудничество</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">Каталог</h3><a class="footer__link" href="#">Angiopharm</a><a class="footer__link" href="#">Остальные товары</a><a class="footer__link" href="#">Скачать каталог</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">контакты</h3><a class="footer__link" href="#">г.Новосибирск, ул.Героев труда, д.19Б</a><a class="footer__link" href="#">8 (383) 310-54-74</a><a class="footer__link" href="#">zakaz@angiofarm.com</a>
-            </div>
-            <div class="footer__item"> 
-              <h3 class="footer__item-title">Получайте новостные E-mail уведомления о наших новинках и акциях</h3>
-              <form class="footer__subscribe" action="#">
-                <div class="footer__input input"><span class="input__title">Ваш E-mail</span>
-                  <input class="footer__input-item input__item" type="text" placeholder="Ваш E-mail"><span class="input__error">error message </span>
-                </div>
-                <button class="footer__subscribe-btn primary-button primary-button_small">Подписаться</button>
-              </form>
-              <div class="footer__wrapper-media">
-                <h3 class="footer__item-title">оставайтесь с нами на связи</h3>
-                <ul class="footer__media-links"> 
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_vk" href="#" aria-label="Вконтакте"> </a></li>
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_instagram" href="#" aria-label="Инстаграм"> </a></li>
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_facebook" href="#" aria-label="faceboock"> </a></li>
-                  <li class="footer__item-media"> <a class="footer__item-media-link footer__item-media-link_whatsapp" href="#" aria-label="WhatsApp"> </a></li>
+    <title>Private Holidays</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+           <div class="header__nav">
+                <ul class="heder__nav__ul">
+                    <li class="nav__li"><a href="#" class="nav__links">home</a></li>
+                    <li class="nav__li"><a href="#" class="nav__links">experiences</a></li>
+                    <li class="nav__li logo"></li>
+                    <li class="nav__li"><a href="#" class="nav__links">questions</a></li>
+                    <li class="nav__li"><a href="#" class="nav__links">contact</a></li>
+                    <li class="burger nav__li"></li>
                 </ul>
-              </div><a class="footer__partners-baner" href="#"></a>
             </div>
-          </div>
-          <div class="footer__informative-links">
-            <div class="footer__payment-methods"><a class="footer__payment-method footer__payment-method_visa" href="#" aria-label="visa"></a><a class="footer__payment-method footer__payment-method_mastercard" href="#" aria-label="mastercard"></a><a class="footer__payment-method footer__payment-method_mir" href="#" aria-label="Мир"></a><a class="footer__payment-method footer__payment-method_bank" href="#" aria-label="Расчетный счет"></a></div>
-            <div class="footer__delivery-methods"><a class="footer__delivery-method footer__delivery-method_cdek" href="#" aria-label="cdek"> </a><a class="footer__delivery-method footer__delivery-method_russian-post" href="#" aria-label="Почта россии"> </a></div>
-          </div>
-        </div><small class="footer__copyright">Интернет-магазин "Ангиофарм" © ООО ФармоГель, 2021</small>
-      </footer>
-    </main>
-    <script defer src="js/common.js"></script>
-  </body>
+        </header>
+        <section class="fullScreen">
+            <h1 class="fullScreen__h1">Enjoy freedom land</h1>
+        </section>
+        <form action="#" class="booking">
+            <div class="booking__hotel booking__item">
+                <select name="hotel" id="booking__hotel" class="booking__select">
+                <option value="Mauritius">Mauritius</option>
+                </select>
+            </div>
+            <div class="booking__check-in booking__item">
+                <select name="check-in" id="booking__date-1" class="booking__select">
+                <option value="24.09.2016">24 Sept 2016</option>
+                </select>
+            </div>
+            <div class="booking__date-of-departure booking__item">
+                <select name="date-of-departure" id="booking__date-2" class="booking__select">
+                <option value="10.10.2016">10 Oct 2016</option>
+                </select>
+            </div>
+            <div class="booking__count-rooms booking__item">
+                <select name="count rooms" id="booking__Bedrooms" class="booking__select">
+                    <option value="b1">1 Bedroom</option>
+                    <option value="b2">2 Bedrooms</option>
+                    <option value="b3">3 Bedrooms</option>
+                    <option value="b4">4 Bedrooms</option>
+                    <option value="b5">5 Bedrooms</option>
+                </select>
+            </div>
+            <button type="submit" class="booking__submit"><img src="img/shape_red.png" alt="button submit"></button>
+        </form>
+        <section class="vacation-ideas">
+            <h2 class="ideas__h2 wrapper_title">See latest vacation ideas</h2>
+            <div class="idea__variants">
+                <div class="idea__item">
+                    <div class="idea__padding">
+                        <a href="#" class="idea__button">Beachfront Escapes</a>
+                    </div>
+                </div>
+                <div class="idea__item">
+                    <div class="idea__padding">
+                        <a href="#" class="idea__button">Group Holidays</a>
+                    </div>
+                </div>
+                <div class="idea__item">
+                    <div class="idea__padding">
+                        <a href="#" class="idea__button">City Breaks</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="Recent-locations">
+            <h2 class="locations__h2 wrapper_title">Recent holiday locations</h2>
+            <div class="locations__variants">
+                <div class="locations__item">
+                    <div class="locations__image">
+                        <img src="img/locations/thalie/Thalie1.jpg" alt="foto locations 1" class="locations__foto">
+                        <img src="img/locations/thalie/Thalie2.jpg" alt="foto locations 2" class="locations__foto">
+                        <img src="img/locations/thalie/Thalie3.jpg" alt="foto locations 3" class="locations__foto">
+                        <img src="img/locations/thalie/Thalie4.jpg" alt="foto locations 4" class="locations__foto">
+                    </div>
+                    <div class="locations__descriptions">
+                        <h3 class="locations__h3">Thalie 5</h3>
+                        <p class="locations__p">Thalie 5 is located on the exclusive Belle Riviere estate, which is home to several of Luxury Retreats’ finest villas in Mauritius.</p>
+                        <div class="locations__ico">
+                            <ul class="locations__ul">
+                                <li class="locations__li">4</li>
+                                <li class="locations__li">4</li>
+                                <li class="locations__li"></li>
+                                <li class="locations__li"></li>
+                            </ul>
+                        </div>
+                        <div class="locations__button"><a href="#" class="locations__link">Book now</a></div>
+                    </div>
+                </div>
+                <div class="locations__item">
+                    <div class="locations__image">
+                        <img src="img/locations/kapalua/Montage%20Kapalua1.jpg" alt="foto location 1" class="locations__foto">
+                        <img src="img/locations/kapalua/Montage%20Kapalua2.jpg" alt="foto location 2" class="locations__foto">
+                        <img src="img/locations/kapalua/Montage%20Kapalua3.jpg" alt="foto location 3" class="locations__foto">
+                        <img src="img/locations/kapalua/Montage%20Kapalua4.jpg" alt="foto location 4" class="locations__foto">
+                    </div>
+                    <div class="locations__descriptions">
+                        <h3 class="locations__h3">Montage Kapalua</h3>
+                        <p class="locations__p">Located only a jaunt from Kahului airport, you’ll be greeted by an easy and scenic drive along the West Maui Mountains and crystal blue waters of the Pacific Ocean.</p>
+                        <div class="locations__ico">
+                            <ul class="locations__ul">
+                                <li class="locations__li">4</li>
+                                <li class="locations__li">4</li>
+                                <li class="locations__li"></li>
+                                <li class="locations__li"></li>
+                            </ul>
+                        </div>
+                        <div class="locations__button"><a href="#" class="locations__link">Book now</a></div>
+                    </div>
+                </div>
+                <div class="locations__item">
+                    <div class="locations__image">
+                        <img src="img/locations/aqua/Agua1.jpg" alt="foto location 1" class="locations__foto">
+                        <img src="img/locations/aqua/Agua2.jpg" alt="foto location 2" class="locations__foto">
+                        <img src="img/locations/aqua/Agua3.jpg" alt="foto location 3" class="locations__foto">
+                        <img src="img/locations/aqua/Agua4.jpg" alt="foto location 4" class="locations__foto">
+                    </div>
+                    <div class="locations__descriptions">
+                        <h3 class="locations__h3">Casa Del Agua</h3>
+                        <p class="locations__p">After a breakfast catered to your taste and served at your leisure, relax in a hammock under the shade of a palm tree or let the</p>
+                        <div class="locations__ico">
+                            <ul class="locations__ul">
+                                <li class="locations__li">4</li>
+                                <li class="locations__li">4</li>
+                                <li class="locations__li"></li>
+                                <li class="locations__li"></li>
+                            </ul>
+                        </div>
+                        <div class="locations__button"><a href="#" class="locations__link">Book now</a></div>
+                    </div>
+                </div>
+                <div class="locations__item">
+                    <div class="locations__image">
+                        <img src="img/locations/jaguar/Jaguar1.jpg" alt="foto location 1" class="locations__foto">
+                        <img src="img/locations/jaguar/Jaguar2.jpg" alt="foto location 2" class="locations__foto">
+                        <img src="img/locations/jaguar/Jaguar3.jpg" alt="foto location 3" class="locations__foto">
+                        <img src="img/locations/jaguar/Jaguar4.jpg" alt="foto location 4" class="locations__foto">
+                    </div>
+                    <div class="locations__descriptions">
+                        <h3 class="locations__h3">Casa Jaguar</h3>
+                        <p class="locations__p">Sleek and sophisticated like the animal for which it has been named, Casa Jaguar is an immaculate tropical luxury villa located in the Mayan</p>
+                        <div class="locations__ico">
+                            <ul class="locations__ul">
+                                <li class="locations__li">4</li>
+                                <li class="locations__li">4</li>
+                                <li class="locations__li"></li>
+                                <li class="locations__li"></li>
+                            </ul>
+                        </div>
+                        <div class="locations__button"><a href="#" class="locations__link">Book now</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages">
+            <h2 class="advantages__h2 wrapper_title">Why we are different</h2>
+            <div class="advantages__block">
+                <div class="advantages__item">
+                    <img src="img/advantages/il1.png" alt="first icon" class="advantages__img">
+                    <h3 class="advantages__h3">Tailor-Made Packages</h3>
+                    <p class="advantages__p">When it comes to delivering the best planned holiday package to you, we strive to exceed your expectations. For us, it has to be spot-on. We do what we do in the ideal way possible.</p>
+                </div>
+                <div class="advantages__item">
+                    <img src="img/advantages/il2.png" alt="second icon" class="advantages__img">
+                    <h3 class="advantages__h3">Best Experience</h3>
+                    <p class="advantages__p">At Purplerain Holidays, we choose to put forth an essence of our own expertise and firsthand experiences into our services and method of planning.</p>
+                </div>
+                <div class="advantages__item">
+                    <img src="img/advantages/il3.png" alt="third icon" class="advantages__img">
+                    <h3 class="advantages__h3">Exquisite Service</h3>
+                    <p class="advantages__p">From the moment you make the first call to enquire, our services are geared up. From the time booking, to your stay and well after the trip as well, we will guide you and be at your back and call.</p>
+                </div>
+            </div>
+        </section>
+        <section class="mail">
+            <div class="mail__padding">
+                 <form action="#" class="mail__form">
+                     <h3 class="mail__h3">Send us a message</h3>
+                     <input type="text" class="maill__name" placeholder="Your name">
+                     <input type="email" class="mail__email" placeholder="Email">
+                     <input type="text" class="mail__message" placeholder="Message">
+                     <input type="submit" class="mail__submit-btn" value="Send">
+                 </form>
+             </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__information footer__column">
+               <h3 class="footer__h3">Information</h3>
+               <ul class="footer__ul">
+                    <li class="footer__li"><a href="#" class="footer__links">About us</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Online enquiry</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Call us</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">General enquiries</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Booking conditions</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Privacy policy</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Refund policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__experiences footer__column">
+                <h3 class="footer__h3">Experiences</h3>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="#" class="footer__links">Beach</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Adventure</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Wildlife</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Honeymoon</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Culture & heritage</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Nature</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Spiritual</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Hill station</a></li>
+                </ul>
+            </div>
+            <div class="footer__themes footer__column">
+                <h3 class="footer__h3">Themes</h3>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="#" class="footer__links">Party</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Wedding</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Group tours</a></li>
+                </ul>
+            </div>
+            <div class="footer__destinations footer__column">
+                <h3 class="footer__h3 footer__title">Popular destinations</h3>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="#" class="footer__links">Leh-Ladakh</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Manali</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Ooty</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Allepey</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Darjeeling</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Goa</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Mahabaleshwar</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Agra</a></li>
+                </ul>
+                <ul class="footer__ul">
+                    <li class="footer__li"><a href="#" class="footer__links">Coorg</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Mysore</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Gir</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Kabini</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Jaipur</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Kodaikanal</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Andaman</a></li>
+                    <li class="footer__li"><a href="#" class="footer__links">Shimla</a></li>
+                </ul>
+            </div>
+            <div class="footer__contacts">
+                <a href="tel:918041127931" class="footer__links">Phone: +91-80-41127931</a><br>
+                <a href="email:info@aztechdesign.co" class="footer__links">Email: info@aztechdesign.co</a><br>
+                <h3 class="footer__h3">Address</h3>
+                <span class="footer__span">1st Main, Bucharest</span><br>
+                <span class="footer__span">2nd Stage Raiffisen Tower,</span><br>
+                <span class="footer__span">Bucharest - 400400,</span><br>
+                <span class="footer__span">Romania</span>
+            </div>
+        </footer>
+    </div>
+    <script src="code.js"></script>
+</body>
 </html>
